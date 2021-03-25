@@ -11,13 +11,14 @@ public class UIManager : MonoBehaviour
     public GameObject backGroundImage;
     public GameObject gameOverScreen;
     public GameObject mainMenuScreen;
+    public GameObject pauseScreen;
     public GameObject inGame;
-    public GameObject characterDancing;   
+    public GameObject characterDancing; 
     
     public void StartGame()
     {
         InGame();
-        inGame.SetActive(true);
+        
         gameOverScreen.SetActive(false);
         //Game Start
         //SceneManager.LoadScene(1);
@@ -40,10 +41,13 @@ public class UIManager : MonoBehaviour
     }
     public void InGame()
     {
+        Time.timeScale = 1f;
+        pauseScreen.SetActive(false);
         backGroundImage.SetActive(false);
         mainScreen.SetActive(false);
         settingScreen.SetActive(false);
         characterDancing.SetActive(false);
+        inGame.SetActive(true);
     }
     IEnumerator SettingButtonAnimDelay()
     {
@@ -60,5 +64,20 @@ public class UIManager : MonoBehaviour
     {
         gameOverScreen.SetActive(false);
         mainMenuScreen.SetActive(true);
+    }
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        inGame.SetActive(false);
+        pauseScreen.SetActive(true);
+    }
+    public void PauseScreenToMenu()
+    {
+        Time.timeScale = 1f;
+        pauseScreen.SetActive(false);
+        mainMenuScreen.SetActive(true);
+        mainScreen.SetActive(true);
+        backGroundImage.SetActive(true);
+        characterDancing.SetActive(true);
     }
 }
