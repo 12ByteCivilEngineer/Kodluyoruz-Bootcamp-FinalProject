@@ -8,7 +8,7 @@ public class CollectObject : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {   
-        Debug.Log("çarptı");
+        
         collectSound.Play();
         CollectingScore.score +=1;
         Destroy(gameObject);
