@@ -13,13 +13,14 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenuScreen;
     public GameObject pauseScreen;
     public GameObject inGame;
-    public GameObject characterDancing; 
-    
+    public GameObject shopScreen;
+    public GameObject characterDancing;
+    public GameObject selectedCharacter;
     public void StartGame()
     {
         InGame();
-        
         gameOverScreen.SetActive(false);
+        TimeControl.instance.BeginGame();
         //Game Start
         //SceneManager.LoadScene(1);
         Debug.Log("oyun başlıyor.");
@@ -79,5 +80,23 @@ public class UIManager : MonoBehaviour
         mainScreen.SetActive(true);
         backGroundImage.SetActive(true);
         characterDancing.SetActive(true);
+    }
+    public void ShopScene()
+    {
+        selectedCharacter.SetActive(true);
+        shopScreen.SetActive(true);
+        mainMenuScreen.SetActive(false);    
+    }
+    public void ShopScreenToMenu()
+    {
+        selectedCharacter.SetActive(false);
+        shopScreen.SetActive(false);
+        mainMenuScreen.SetActive(true);
+    }
+    public void GameOverScene()
+    {
+        gameOverScreen.SetActive(true);
+        inGame.SetActive(false);
+        TimeControl.instance.GameOver();      
     }
 }

@@ -140,6 +140,10 @@
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManagerEditor.cs" />
     <Compile Include="Assets\Script\Music\SoundManager.cs" />
     <Compile Include="Assets\Script\UI\LevelBar.cs" />
+    <Compile Include="Assets\Script\UI\Score\TimeControl.cs" />
+    <Compile Include="Assets\Script\UI\ShopMenu\CharacterBuy.cs" />
+    <Compile Include="Assets\Script\UI\ShopMenu\CharacterSelect.cs" />
+    <Compile Include="Assets\Script\UI\ShopMenu\InGameCharacterSelect.cs" />
     <Compile Include="Assets\Script\UI\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
