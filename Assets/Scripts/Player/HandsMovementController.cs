@@ -5,31 +5,41 @@ using DG.Tweening;
 
 public class HandsMovementController : MonoBehaviour
 {
-    //public HandType handType;
-
+    GameManager gameManager;
     public HandControl handControl;
     [SerializeField] GameObject[] hands;
-    [SerializeField] float moveTime = 1f;
+    public float moveTime = 1f;
     [SerializeField] float forceCoefficient = 1f;
-    //Rigidbody hand;
-    //[SerializeField] float force;
+    [SerializeField] float maxAllowedHandGap = 2.47f;
+    GameObject collisionDetector;
 
-    void Start()
+    private void Awake()
     {
-        //hand = GetComponent<Rigidbody>();
+        gameManager = FindObjectOfType<GameManager>();
+        collisionDetector = FindObjectOfType<HandCollisionDetector>().gameObject;
     }
 
-    public void HandForce()
-    {
-        //hand.AddForce(0f, force, 0f, ForceMode.Force);
-    }
-    public void MoveHand(HandControl handType,float force)
+    public void MoveHand(HandControl handType,float force, Vector3 position)
     {
         int i;
         if (handType == HandControl.LEFT) { i = 0; }
         else { i = 1; }
-        Vector3 target = new Vector3(hands[i].transform.position.x, hands[i].transform.position.y + force * forceCoefficient, hands[i].transform.position.z);
+        Vector3 direction = (position - hands[i].transform.position).normalized;
+        Vector3 target = hands[i].transform.position + (direction * force * forceCoefficient /Time.timeScale);
+        DoDistanceCheck(i,target);
         hands[i].transform.DOMove(target, moveTime);
+        collisionDetector.transform.position = target;
     }
 
+    private void DoDistanceCheck(int i, Vector3 target)
+    {
+        int j = 0;
+        if (i==0) { j = 1; }
+        float distance = Vector3.Distance(hands[j].transform.position, target);
+        if (distance > maxAllowedHandGap)
+        {
+            gameManager.IsGameLost = true;
+            Debug.Log("Too much distance");
+        }
+    }
 }

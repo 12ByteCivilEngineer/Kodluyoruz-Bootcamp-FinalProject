@@ -8,10 +8,9 @@ public enum MoveControl
     MOVE,
     WAIT
 }
-
 public class Player: MonoBehaviour
 {
-    
+
 }
 
 

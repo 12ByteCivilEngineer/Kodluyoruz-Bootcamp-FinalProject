@@ -63,9 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CubeMovement.cs" />
-    <Compile Include="Assets\EnemyMovementController.cs" />
-    <Compile Include="Assets\Entity.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Animated Icon\AnimatedIconHandler.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Button\ButtonManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Button\ButtonManagerBasic.cs" />
@@ -140,20 +141,25 @@
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowDragger.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManagerEditor.cs" />
-    <Compile Include="Assets\PlayerInputController.cs" />
-    <Compile Include="Assets\PlayerMovementController.cs" />
-    <Compile Include="Assets\Sabit.cs" />
-    <Compile Include="Assets\Script\Music\SoundManager.cs" />
-    <Compile Include="Assets\Script\UI\LevelBar.cs" />
-    <Compile Include="Assets\Script\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Entity.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GameSceneManager.cs" />
+    <Compile Include="Assets\Scripts\HandCollisionDetector.cs" />
+    <Compile Include="Assets\Scripts\Music\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\CubeMovement.cs" />
     <Compile Include="Assets\Scripts\Not in Use\HandMovement.cs" />
     <Compile Include="Assets\Scripts\Not in Use\LeftHand.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\PlayerInputController.cs" />
     <Compile Include="Assets\Scripts\Not in Use\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\PlayerMovementController.cs" />
     <Compile Include="Assets\Scripts\Not in Use\RightHand.cs" />
+    <Compile Include="Assets\Scripts\Player\HandCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\Player\HandsMovementController.cs" />
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelBar.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -762,6 +768,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/Final Project Dogu/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Dogu/Unity Oyun/Final Project Dogu/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>C:/Users/Dogu/Unity Oyun/Final Project Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
@@ -797,6 +806,9 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>C:/Users/Dogu/Unity Oyun/Final Project Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/Dogu/Unity Oyun/Final Project Dogu/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/Final Project Dogu/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
