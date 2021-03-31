@@ -188,7 +188,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 1
+=======
+  m_IsActive: 0
+>>>>>>> Dogukan
 --- !u!65 &23827164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -813,7 +817,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+  m_RootOrder: 4
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &168594664
 GameObject:
@@ -982,6 +990,105 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
+<<<<<<< HEAD
+=======
+--- !u!1 &195220463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 195220466}
+  - component: {fileID: 195220465}
+  - component: {fileID: 195220464}
+  m_Layer: 0
+  m_Name: JetPack
+  m_TagString: Jetpack
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &195220464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195220463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.044251088, y: 0.0676764, z: 0.033006415}
+  m_Center: {x: -0.006370363, y: 0.003001399, z: -0.0038882745}
+--- !u!137 &195220465
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195220463}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: -6478536213147159724, guid: 93854d31ce323664da2d2e896a7411c3, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4493585093827132993, guid: 93854d31ce323664da2d2e896a7411c3, type: 3}
+  m_Bones: []
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: -0.006370361, y: -0.0005129096, z: -0.0038882755}
+    m_Extent: {x: 0.022125542, y: 0.008457102, z: 0.01650321}
+  m_DirtyAABB: 0
+--- !u!4 &195220466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195220463}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 5.636, y: 7.35, z: 0.110774055}
+  m_LocalScale: {x: 14.887461, y: 14.6640005, z: 26.107466}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+>>>>>>> Dogukan
 --- !u!1 &216135229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1293,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263769756}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 --- !u!1 &272419177
 GameObject:
   m_ObjectHideFlags: 3
@@ -1284,6 +1392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> Dogukan
 --- !u!1 &283996097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,6 +1866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19c065b476ca9a24e839e181a781c36c, type: 3}
+<<<<<<< HEAD
 --- !u!1 &433754150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,6 +1934,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+=======
+>>>>>>> Dogukan
 --- !u!1 &449721404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1914,7 +2027,11 @@ Transform:
   m_LocalScale: {x: 10, y: 100, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 10
+=======
+  m_RootOrder: 11
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &464763151
 GameObject:
@@ -2682,7 +2799,11 @@ Transform:
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 13
+=======
+  m_RootOrder: 14
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &666577606
 GameObject:
@@ -2950,7 +3071,11 @@ Transform:
   m_LocalScale: {x: 1000, y: 1, z: 1000}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 9
+=======
+  m_RootOrder: 10
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &687712799
 GameObject:
@@ -3129,7 +3254,11 @@ Transform:
   - {fileID: 1791610005}
   - {fileID: 283996102}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 12
+=======
+  m_RootOrder: 13
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &771743237
 GameObject:
@@ -3161,7 +3290,11 @@ Transform:
   - {fileID: 1050629938}
   - {fileID: 605413795}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+  m_RootOrder: 6
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826704931
 GameObject:
@@ -3182,7 +3315,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 1
+=======
+  m_IsActive: 0
+>>>>>>> Dogukan
 --- !u!65 &826704932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3467,7 +3604,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 5
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &860623633
 GameObject:
@@ -3596,7 +3737,11 @@ Transform:
   m_LocalScale: {x: 0.36214, y: 0.36214, z: 0.36214}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 7
+=======
+  m_RootOrder: 8
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &885302696
 GameObject:
@@ -3963,7 +4108,11 @@ Transform:
   m_LocalScale: {x: 10.281151, y: -0.09069539, z: 0.3016142}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 8
+=======
+  m_RootOrder: 9
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &947313184 stripped
 Transform:
@@ -4455,7 +4604,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 11
+=======
+  m_RootOrder: 12
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1192409549
 GameObject:
@@ -5636,7 +5789,11 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 1
+=======
+  m_IsActive: 0
+>>>>>>> Dogukan
 --- !u!65 &1570269037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6192,7 +6349,10 @@ GameObject:
   - component: {fileID: 1795879765}
   - component: {fileID: 1795879764}
   - component: {fileID: 1795879767}
+<<<<<<< HEAD
   - component: {fileID: 1795879768}
+=======
+>>>>>>> Dogukan
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6258,12 +6418,21 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795879763}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 24.27, y: 7.96, z: 0.11910469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+=======
+  m_LocalRotation: {x: 0.057655424, y: -0.71206224, z: 0.05887909, w: 0.69726366}
+  m_LocalPosition: {x: 33.24596, y: 10.997166, z: 0.24389744}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1795879767
 MonoBehaviour:
@@ -6296,6 +6465,7 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+<<<<<<< HEAD
 --- !u!114 &1795879768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6330,6 +6500,8 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+=======
+>>>>>>> Dogukan
 --- !u!1 &1832454301
 GameObject:
   m_ObjectHideFlags: 0
@@ -7602,7 +7774,11 @@ Transform:
   - {fileID: 546838378}
   - {fileID: 1232374024}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 6
+=======
+  m_RootOrder: 7
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1077522500287741908
 CapsuleCollider:
@@ -7660,7 +7836,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1713217959059568354}
   - component: {fileID: 1713217959059568355}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Hands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7803,7 +7983,11 @@ GameObject:
   - component: {fileID: 2452673345933544818}
   - component: {fileID: 2452673345933544819}
   - component: {fileID: 2452673345933544846}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Right Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7942,7 +8126,11 @@ GameObject:
   - component: {fileID: 2452673346058245072}
   - component: {fileID: 2452673346058245073}
   - component: {fileID: 2452673346058245068}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Left Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26636,7 +26824,11 @@ GameObject:
   - component: {fileID: 3440315260091703371}
   - component: {fileID: 3273073247113227925}
   - component: {fileID: 3272849694544749043}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Lines
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -26655,7 +26847,11 @@ GameObject:
   - component: {fileID: 3273748014448041871}
   - component: {fileID: 3273311394079397219}
   - component: {fileID: 3330859360725217723}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: CFX_Explosion_B_Smoke+Text
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -26673,7 +26869,11 @@ GameObject:
   - component: {fileID: 3431854708299669493}
   - component: {fileID: 3273654158759333831}
   - component: {fileID: 3273311991753830861}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26691,7 +26891,11 @@ GameObject:
   - component: {fileID: 3440629490381083467}
   - component: {fileID: 3274038487111482957}
   - component: {fileID: 3272600755783258027}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26709,7 +26913,11 @@ GameObject:
   - component: {fileID: 3431880685604515273}
   - component: {fileID: 3327743175711763831}
   - component: {fileID: 3330101281685034433}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26727,7 +26935,11 @@ GameObject:
   - component: {fileID: 3435842973821671313}
   - component: {fileID: 3435842973821671327}
   - component: {fileID: 3435842973821671326}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31246,15 +31458,24 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3435842973845364551}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.7058309, y: -0.042459514, z: 0.042459514, w: 0.7058309}
   m_LocalPosition: {x: 0.08936958, y: 0.78597474, z: -0.35593107}
+=======
+  m_LocalRotation: {x: 0.7058309, y: -0.042459473, z: 0.042459473, w: 0.7058309}
+  m_LocalPosition: {x: 0.09, y: 0.91, z: -0.37}
+>>>>>>> Dogukan
   m_LocalScale: {x: 14.887457, y: 14.663995, z: 26.107456}
   m_Children:
   - {fileID: 3435842974694941117}
   - {fileID: 3440538870604341145}
   m_Father: {fileID: 8268247600644268705}
   m_RootOrder: 21
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 90, y: -97.47, z: 0}
+=======
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 6.885}
+>>>>>>> Dogukan
 --- !u!137 &3435842973845364549
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -31316,13 +31537,21 @@ GameObject:
   m_Component:
   - component: {fileID: 3435842973845364548}
   - component: {fileID: 3435842973845364549}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: JetPackEfect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> Dogukan
 --- !u!199 &3435842973973033370
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -35951,7 +36180,11 @@ GameObject:
   - component: {fileID: 3435842973973033373}
   - component: {fileID: 3435842973973033371}
   - component: {fileID: 3435842973973033370}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: CFX4 Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40643,7 +40876,11 @@ GameObject:
   - component: {fileID: 3435842974261122404}
   - component: {fileID: 3435842974261122402}
   - component: {fileID: 3435842974261122405}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Lines
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -40705,7 +40942,11 @@ GameObject:
   - component: {fileID: 3435842974519618056}
   - component: {fileID: 3435842974539018062}
   - component: {fileID: 3435842974538979054}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: CFX4 Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40723,7 +40964,11 @@ GameObject:
   - component: {fileID: 3435842974519618060}
   - component: {fileID: 3435842974529993484}
   - component: {fileID: 3435842974530438092}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40741,7 +40986,11 @@ GameObject:
   - component: {fileID: 3435842974519618062}
   - component: {fileID: 3435842974539018060}
   - component: {fileID: 3435842974538979052}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: CFX4 Sparkles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49958,7 +50207,11 @@ GameObject:
   - component: {fileID: 3435842974694941116}
   - component: {fileID: 3435842974694941119}
   - component: {fileID: 3435842974694941118}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: CFX_Explosion_B_Smoke+Text (1)
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -54616,7 +54869,11 @@ GameObject:
   - component: {fileID: 3435842974792513369}
   - component: {fileID: 3435842974792513383}
   - component: {fileID: 3435842974792513382}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54801,7 +55058,11 @@ GameObject:
   - component: {fileID: 3435842974928175803}
   - component: {fileID: 3435842974928175801}
   - component: {fileID: 3435842974928175800}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59338,7 +59599,11 @@ GameObject:
   - component: {fileID: 3435842975055657603}
   - component: {fileID: 3435842975055657601}
   - component: {fileID: 3435842975055657600}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: CFX4 Sparkles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59370,7 +59635,11 @@ GameObject:
   - component: {fileID: 3435842975279215977}
   - component: {fileID: 3435842975279215991}
   - component: {fileID: 3435842975279215990}
+<<<<<<< HEAD
   m_Layer: 0
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64679,7 +64948,11 @@ Transform:
   - {fileID: 1713217959059568354}
   - {fileID: 3435842973845364548}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+  m_RootOrder: 2
+>>>>>>> Dogukan
   m_LocalEulerAnglesHint: {x: 0, y: -90.58501, z: 0}
 --- !u!4 &8268247600644269879
 Transform:
@@ -65222,7 +65495,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644318287}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: IndexFinger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65238,7 +65515,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644309113}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65255,7 +65536,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644275193}
   - component: {fileID: 8268247600649993613}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_ShopKeeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65349,7 +65634,11 @@ GameObject:
   - component: {fileID: 8268247600644491930}
   - component: {fileID: 8268247600644491928}
   - component: {fileID: 8268247600644491929}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65365,7 +65654,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644272803}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Finger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65381,7 +65674,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644270125}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Ankle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65397,7 +65694,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644236617}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Toes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65413,7 +65714,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644233723}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Finger_04 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65430,7 +65735,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644352957}
   - component: {fileID: 8268247600649976337}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_GamerGirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65463,7 +65772,11 @@ GameObject:
   - component: {fileID: 8268247600644501496}
   - component: {fileID: 8268247600644501502}
   - component: {fileID: 8268247600644501503}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: UpperLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65541,7 +65854,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644315735}
   - component: {fileID: 8268247600649739055}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Tourist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65574,7 +65891,11 @@ GameObject:
   - component: {fileID: 8268247600644505072}
   - component: {fileID: 8268247600644505079}
   - component: {fileID: 8268247600644505078}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: LowerLeg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65651,7 +65972,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644356559}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Ankle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65668,7 +65993,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644283413}
   - component: {fileID: 8268247600649978893}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Roadworker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65684,7 +66013,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644354511}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Thumb_02 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65701,7 +66034,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644234685}
   - component: {fileID: 8268247600649748479}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Biker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65718,11 +66055,22 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644268705}
   - component: {fileID: 8268247600653926817}
+<<<<<<< HEAD
   - component: {fileID: 8268247600644519094}
   - component: {fileID: 8268247600644519095}
   m_Layer: 10
   m_Name: RagdollCharacter
   m_TagString: Untagged
+=======
+  - component: {fileID: 8268247600644519097}
+  - component: {fileID: 8268247600644519094}
+  - component: {fileID: 8268247600644519095}
+  - component: {fileID: 8268247600644519096}
+  - component: {fileID: 8268247600644519098}
+  m_Layer: 8
+  m_Name: RagdollCharacter
+  m_TagString: Player
+>>>>>>> Dogukan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65755,6 +66103,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5283b4993a5a794f9b8ea232e7493da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+--- !u!65 &8268247600644519096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8268247600644519093}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.51304954, y: 1.9667654, z: 0.5812138}
+  m_Center: {x: -0.0018035026, y: 0.6024089, z: -0.030848026}
+--- !u!114 &8268247600644519097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8268247600644519093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e683774139f394ea83c2a6b6dcba39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8268247600644519098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8268247600644519093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcadd9c35f0a974b833fee975e8ea04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Dogukan
 --- !u!1 &8268247600644522097
 GameObject:
   m_ObjectHideFlags: 0
@@ -65764,7 +66152,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644232735}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Spine_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65783,7 +66175,11 @@ GameObject:
   - component: {fileID: 8268247600644522716}
   - component: {fileID: 8268247600644522690}
   - component: {fileID: 8268247600644522691}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Spine_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65873,7 +66269,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644306081}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Thumb_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65894,7 +66294,11 @@ GameObject:
   - component: {fileID: 2452673345807123766}
   - component: {fileID: 8268247600644523454}
   - component: {fileID: 8268247600644523455}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Hand_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65946,7 +66350,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644233805}
   - component: {fileID: 8268247600649951577}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Paramedic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65963,7 +66371,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644314477}
   - component: {fileID: 8268247600649968217}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Hotdog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66057,7 +66469,11 @@ GameObject:
   - component: {fileID: 8268247600644531618}
   - component: {fileID: 8268247600644531617}
   - component: {fileID: 8268247600644531616}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Elbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66078,7 +66494,11 @@ GameObject:
   - component: {fileID: 2452673344796575964}
   - component: {fileID: 8268247600644531872}
   - component: {fileID: 8268247600644531873}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Hand_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66130,7 +66550,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644238829}
   - component: {fileID: 8268247600649945855}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_SummerGirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66163,7 +66587,11 @@ GameObject:
   - component: {fileID: 8268247600644534432}
   - component: {fileID: 8268247600644534438}
   - component: {fileID: 8268247600644534439}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: UpperLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66240,7 +66668,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644251185}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Thumb_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66257,7 +66689,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644353139}
   - component: {fileID: 8268247600649929881}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Grandpa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66273,7 +66709,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644303803}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: IndexFinger_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66292,7 +66732,11 @@ GameObject:
   - component: {fileID: 8268247600644537054}
   - component: {fileID: 8268247600644537053}
   - component: {fileID: 8268247600644537052}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Elbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66383,7 +66827,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644255935}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Ball_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66400,7 +66848,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644235855}
   - component: {fileID: 8268247600649960373}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Gangster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66416,7 +66868,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644245763}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Finger_02 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66432,7 +66888,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644282619}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Finger_03 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66448,7 +66908,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644246573}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: IndexFinger_01 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66464,7 +66928,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644280779}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Eyebrows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66480,7 +66948,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644260783}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Ball_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66574,7 +67046,11 @@ GameObject:
   - component: {fileID: 8268247600644541106}
   - component: {fileID: 8268247600644541105}
   - component: {fileID: 8268247600644541104}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: LowerLeg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66591,7 +67067,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644266355}
   - component: {fileID: 8268247600649986495}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_PunkGirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66608,7 +67088,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644290517}
   - component: {fileID: 8268247600649745533}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Grandma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66625,7 +67109,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644251585}
   - component: {fileID: 8268247600649971505}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_PunkGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66642,7 +67130,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644309189}
   - component: {fileID: 8268247600649748411}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Hobo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66658,7 +67150,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644233905}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: IndexFinger_03 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66674,7 +67170,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644244555}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: IndexFinger_02 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66690,7 +67190,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644247711}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Thumb_03 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66706,7 +67210,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644282055}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Thumb_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66722,7 +67230,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644293395}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: IndexFinger_04 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66738,7 +67250,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644298505}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: IndexFinger_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66754,7 +67270,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644237797}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Finger_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66771,7 +67291,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644255953}
   - component: {fileID: 8268247600649939935}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_HipsterGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66788,7 +67312,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644228887}
   - component: {fileID: 8268247600649736317}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_FireFighter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66805,7 +67333,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644319503}
   - component: {fileID: 8268247600649986811}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_Jock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66821,7 +67353,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644357449}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Thumb_01 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66854,7 +67390,11 @@ GameObject:
   - component: {fileID: 8268247600644728768}
   - component: {fileID: 8268247600644728774}
   - component: {fileID: 8268247600644728775}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66931,7 +67471,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644229293}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66947,7 +67491,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644236723}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66963,7 +67511,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644237899}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Finger_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67011,7 +67563,11 @@ GameObject:
   - component: {fileID: 8268247600644732229}
   - component: {fileID: 8268247600644732228}
   - component: {fileID: 8268247600644732236}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67041,7 +67597,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644247937}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Clavicle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67057,7 +67617,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644320729}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Clavicle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67073,7 +67637,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644345425}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Finger_01 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67089,7 +67657,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644289923}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Toes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67105,7 +67677,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644239759}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Spine_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67137,7 +67713,11 @@ GameObject:
   - component: {fileID: 8268247600644738264}
   - component: {fileID: 8268247600644738271}
   - component: {fileID: 8268247600644738270}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67215,7 +67795,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644268559}
   - component: {fileID: 8268247600649952259}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_HipsterGirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67232,7 +67816,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8268247600644263209}
   - component: {fileID: 8268247600649992343}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Character_FastFoodGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67248,7 +67836,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644285823}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: IndexFinger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67264,7 +67856,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8268247600644231739}
+<<<<<<< HEAD
   m_Layer: 10
+=======
+  m_Layer: 8
+>>>>>>> Dogukan
   m_Name: Finger_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
