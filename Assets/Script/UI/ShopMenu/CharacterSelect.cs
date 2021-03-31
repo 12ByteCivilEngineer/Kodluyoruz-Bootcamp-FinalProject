@@ -6,14 +6,13 @@ using TMPro;
 public class CharacterSelect : MonoBehaviour
 {
     public int currentCharacterIndex;
+    public int buttonInt;
     public GameObject[] characterModels;
-
     public CharacterBuy[] characters;
     public Button buyButton;
-
-    int coin = 1000;
+    public Button selectButton;
+    public Text shopCoinText;
     public TextMeshProUGUI proUGUI;
-
     private void Start()
     {
         foreach (CharacterBuy character in characters)
@@ -33,12 +32,13 @@ public class CharacterSelect : MonoBehaviour
             character.SetActive(false);
             characterModels[currentCharacterIndex].SetActive(true);
         }
-        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();         
     }
     private void Update()
     {
         UpdateUI();
-        proUGUI.text = "" + coin;
+        shopCoinText.text= PlayerPrefs.GetInt("NumberOfCoins").ToString();
+       //Debug.Log(PlayerPrefs.GetInt("SelectedCharacter", currentCharacterIndex));
     }
     public void ChangeNext()
     {
@@ -54,7 +54,14 @@ public class CharacterSelect : MonoBehaviour
         {
             return;
         }
-        PlayerPrefs.SetInt("SelectedCharacter", currentCharacterIndex);
+        if (PlayerPrefs.GetInt("SelectedCharacter", currentCharacterIndex) == currentCharacterIndex)
+        {
+            selectButton.interactable = false;
+        }
+        else
+        {
+            selectButton.interactable = true;
+        }
     }
     public void ChangePrevious()
     {
@@ -71,16 +78,30 @@ public class CharacterSelect : MonoBehaviour
         {
             return;
         }
+
+        if (PlayerPrefs.GetInt("SelectedCharacter", currentCharacterIndex)==currentCharacterIndex)
+        {
+            selectButton.interactable = false;
+        }
+        else
+        {
+            selectButton.interactable = true;
+        }
+    }   
+    public void SelectedButton()
+    {
         PlayerPrefs.SetInt("SelectedCharacter", currentCharacterIndex);
-    }
+        selectButton.interactable = false;
+        Debug.Log(PlayerPrefs.GetInt("SelectedCharacter", currentCharacterIndex));
+    }  
     public void UnLockCharacter()
     {
         CharacterBuy coinPrice = characters[currentCharacterIndex];
         PlayerPrefs.SetInt(coinPrice.name, 1);
         PlayerPrefs.SetInt("SelectedCharacter",currentCharacterIndex);
         coinPrice.inUnLocked = true;
-        //PlayerPrefs.SetInt("NumberOfCoins", PlayerPrefs.GetInt("NumberOfCoins", 0) - coinPrice.price); >> Satın alınan öge fiyatı
-        coin= coin - coinPrice.price;
+        selectButton.interactable = false;
+        PlayerPrefs.SetInt("NumberOfCoins", PlayerPrefs.GetInt("NumberOfCoins", 0) - coinPrice.price); /*>> Coin - Satın alınan öge fiyatı*/        
     }
     public void UpdateUI()
     {
@@ -88,14 +109,15 @@ public class CharacterSelect : MonoBehaviour
         if (coinPrice.inUnLocked)
         {
             buyButton.gameObject.SetActive(false);
+            selectButton.gameObject.SetActive(true);
         }
         else
         {
             buyButton.gameObject.SetActive(true);
+            selectButton.gameObject.SetActive(false);
             buyButton.GetComponentInChildren<Text>().text = "Buy -" + coinPrice.price;
-            
-            //if (coinPrice.price<PlayerPrefs.GetInt("NumberOfCoins",0)) >> 
-            if (coinPrice.price<coin)
+
+            if (coinPrice.price < PlayerPrefs.GetInt("NumberOfCoins", 0))
             {
                 buyButton.interactable = true;
             }
