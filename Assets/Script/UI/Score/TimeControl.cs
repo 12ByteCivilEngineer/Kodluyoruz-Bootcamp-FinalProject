@@ -56,8 +56,6 @@ public class TimeControl : MonoBehaviour
             highScore = elapsedTime; 
             PlayerPrefs.SetFloat("HighScore", elapsedTime);
         }
-        
-        //PlayerPrefs.SetString("HighScore", timePlayingStr);
         gameOverText.text ="Score : "+ elapsedTime.ToString("00");
         highScoreText.text = "HighScore : " + highScore.ToString("00");
     }
