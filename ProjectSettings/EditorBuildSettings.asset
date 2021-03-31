@@ -4,8 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/CoreGameDogu.unity
-    guid: a1d483bf9018ecf4083be36a79e009be
+  m_Scenes: []
   m_configObjects: {}
