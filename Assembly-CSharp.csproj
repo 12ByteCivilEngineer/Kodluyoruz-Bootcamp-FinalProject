@@ -63,6 +63,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CollectObject\Scripts\AnimationScript.cs" />
+    <Compile Include="Assets\CollectObject\Scripts\CollectObject.cs" />
+    <Compile Include="Assets\CollectObject\Scripts\CollectingScore.cs" />
+    <Compile Include="Assets\CollectObject\Scripts\Değişcek\Coin.cs" />
+    <Compile Include="Assets\CollectObject\Scripts\Değişcek\ICollectible.cs" />
+    <Compile Include="Assets\CollectObject\Scripts\Değişcek\PlayerController.cs" />
+    <Compile Include="Assets\CubeMovement.cs" />
+    <Compile Include="Assets\EnemyMovementController.cs" />
+    <Compile Include="Assets\Entity.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Animated Icon\AnimatedIconHandler.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Button\ButtonManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Button\ButtonManagerBasic.cs" />
@@ -137,14 +150,34 @@
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowDragger.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManagerEditor.cs" />
-    <Compile Include="Assets\Script\Music\SoundManager.cs" />
-    <Compile Include="Assets\Script\UI\LevelBar.cs" />
-    <Compile Include="Assets\Script\UI\Score\Coin.cs" />
-    <Compile Include="Assets\Script\UI\Score\TimeControl.cs" />
-    <Compile Include="Assets\Script\UI\ShopMenu\CharacterBuy.cs" />
-    <Compile Include="Assets\Script\UI\ShopMenu\CharacterSelect.cs" />
-    <Compile Include="Assets\Script\UI\ShopMenu\InGameCharacterSelect.cs" />
-    <Compile Include="Assets\Script\UI\UIManager.cs" />
+    <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\PlayerInputController.cs" />
+    <Compile Include="Assets\PlayerMovementController.cs" />
+    <Compile Include="Assets\Sabit.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GameSceneManager.cs" />
+    <Compile Include="Assets\Scripts\HandCollisionDetector.cs" />
+    <Compile Include="Assets\Scripts\Jetpack\JetpackControl.cs" />
+    <Compile Include="Assets\Scripts\Music\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\CubeMovement.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\HandMovement.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\LeftHand.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\PlayerInputController.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\PlayerMovementController.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\RightHand.cs" />
+    <Compile Include="Assets\Scripts\Player\FlyControl.cs" />
+    <Compile Include="Assets\Scripts\Player\HandCollisionHandler.cs" />
+    <Compile Include="Assets\Scripts\Player\HandsMovementController.cs" />
+    <Compile Include="Assets\Scripts\Player\InputController.cs" />
+    <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelBar.cs" />
+    <Compile Include="Assets\Scripts\UI\Score\Coin.cs" />
+    <Compile Include="Assets\Scripts\UI\Score\TimeControl.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopMenu\CharacterBuy.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopMenu\CharacterSelect.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopMenu\InGameCharacterSelect.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -183,11 +216,9 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
-    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
-    <None Include="Assets\SimplePeople\Changelog.txt" />
+    <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Modern UI Pack\Read Me.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -197,15 +228,16 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\SimpleSky\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\PolygonCity\Change_Log.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
-    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/CCleaner/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -388,6 +420,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/CCleaner/2019.4.21f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/Users/Dogu/Unity Oyun/UnityRepo/final-projects-bitirme-ekip-2/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/CCleaner/2019.4.21f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -804,7 +839,12 @@
       <HintPath>C:/Users/Dogu/Unity Oyun/UnityRepo/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{15213FD5-240A-677F-E89B-027F9EA49A8C}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
