@@ -11,14 +11,16 @@ public class UIManager : MonoBehaviour
     public GameObject backGroundImage;
     public GameObject gameOverScreen;
     public GameObject mainMenuScreen;
+    public GameObject pauseScreen;
     public GameObject inGame;
-    public GameObject characterDancing;   
-    
+    public GameObject shopScreen;
+    public GameObject characterDancing;
+    public GameObject selectedCharacter;
     public void StartGame()
     {
         InGame();
-        inGame.SetActive(true);
         gameOverScreen.SetActive(false);
+        TimeControl.instance.BeginGame();
         //Game Start
         //SceneManager.LoadScene(1);
         Debug.Log("oyun başlıyor.");
@@ -40,10 +42,13 @@ public class UIManager : MonoBehaviour
     }
     public void InGame()
     {
+        Time.timeScale = 1f;
+        pauseScreen.SetActive(false);
         backGroundImage.SetActive(false);
         mainScreen.SetActive(false);
         settingScreen.SetActive(false);
         characterDancing.SetActive(false);
+        inGame.SetActive(true);
     }
     IEnumerator SettingButtonAnimDelay()
     {
@@ -60,5 +65,38 @@ public class UIManager : MonoBehaviour
     {
         gameOverScreen.SetActive(false);
         mainMenuScreen.SetActive(true);
+    }
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        inGame.SetActive(false);
+        pauseScreen.SetActive(true);
+    }
+    public void PauseScreenToMenu()
+    {
+        Time.timeScale = 1f;
+        pauseScreen.SetActive(false);
+        mainMenuScreen.SetActive(true);
+        mainScreen.SetActive(true);
+        backGroundImage.SetActive(true);
+        characterDancing.SetActive(true);
+    }
+    public void ShopScene()
+    {
+        selectedCharacter.SetActive(true);
+        shopScreen.SetActive(true);
+        mainMenuScreen.SetActive(false);    
+    }
+    public void ShopScreenToMenu()
+    {
+        selectedCharacter.SetActive(false);
+        shopScreen.SetActive(false);
+        mainMenuScreen.SetActive(true);
+    }
+    public void GameOverScene()
+    {
+        gameOverScreen.SetActive(true);
+        inGame.SetActive(false);
+        TimeControl.instance.GameOver();      
     }
 }
