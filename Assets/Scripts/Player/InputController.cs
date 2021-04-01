@@ -39,29 +39,34 @@ public class InputController : MonoBehaviour
 
     void GetHoldTime()
     {
-        if (isCooldownOn) { return; }
-        if (Input.GetButtonDown("Fire1"))
+        //if (isCooldownOn) { return; }
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+        //    isPressed = true;
+        //    startTime = Time.time;
+        //}
+        //if (Input.GetButtonUp("Fire1"))
+        //{
+        //    if(!isPressed) { return; }
+        //    isPressed = false;
+        //    endTime = Time.time;
+        //    holdTimer = endTime - startTime;
+        //    //handMovement[(int)HandCont].HandForce();
+        //    handMovement.MoveHand(HandCont, holdTimer,GetMousePosition());
+        //    if (HandCont == HandControl.LEFT)
+        //    {
+        //        HandCont = HandControl.RIGHT;
+        //    }
+        //    else
+        //    {
+        //        HandCont = HandControl.LEFT;
+        //    }
+        //    StartCoroutine(ClimbCooldown());
+        //}
+
+        if (Input.GetButton("Fire1"))
         {
-            isPressed = true;
-            startTime = Time.time;
-        }
-        if (Input.GetButtonUp("Fire1"))
-        {
-            if(!isPressed) { return; }
-            isPressed = false;
-            endTime = Time.time;
-            holdTimer = endTime - startTime;
-            //handMovement[(int)HandCont].HandForce();
-            handMovement.MoveHand(HandCont, holdTimer,GetMousePosition());
-            if (HandCont == HandControl.LEFT)
-            {
-                HandCont = HandControl.RIGHT;
-            }
-            else
-            {
-                HandCont = HandControl.LEFT;
-            }
-            StartCoroutine(ClimbCooldown());
+            handMovement.ClimbUp();
         }
     }
 

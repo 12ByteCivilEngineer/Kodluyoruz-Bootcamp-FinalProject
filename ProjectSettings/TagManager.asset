@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coins
+  - FxTemporaire
+  - trap
+  - Jetpack
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - DancingCharacters
   - 
   - 
   - 
