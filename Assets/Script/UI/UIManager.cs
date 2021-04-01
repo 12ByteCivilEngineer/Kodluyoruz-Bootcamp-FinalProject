@@ -14,11 +14,13 @@ public class UIManager : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject inGame;
     public GameObject shopScreen;
+    public GameObject gameTutorialScreen;
     public GameObject characterDancing;
     public GameObject selectedCharacter;
     public void StartGame()
     {
         InGame();
+        //gameTutorialScreen.SetActive(true);
         gameOverScreen.SetActive(false);
         TimeControl.instance.BeginGame();
         //Game Start
@@ -49,6 +51,7 @@ public class UIManager : MonoBehaviour
         settingScreen.SetActive(false);
         characterDancing.SetActive(false);
         inGame.SetActive(true);
+        gameTutorialScreen.SetActive(false);
     }
     IEnumerator SettingButtonAnimDelay()
     {
