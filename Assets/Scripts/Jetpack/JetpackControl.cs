@@ -12,13 +12,13 @@ public class JetpackControl : MonoBehaviour
 
     FlyControl flyControl;
     FlyState flyState;
+    [SerializeField]
     GameObject jetpack;
 
     private void Start()
     {
         flyControl = FindObjectOfType<FlyControl>();
         flyState = FlyState.NOTFLYING;
-        jetpack = GameObject.Find("/RagdollCharacter/JetPackEfect");
         jetpack.SetActive(false);
     }
 
