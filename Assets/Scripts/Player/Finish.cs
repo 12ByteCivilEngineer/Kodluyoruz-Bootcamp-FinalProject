@@ -9,6 +9,7 @@ public class Finish : MonoBehaviour
     {
         if (other.CompareTag("Finish"))
         {
+            Time.timeScale = 0f;
             winnerScreen.SetActive(true);
             Debug.Log("Değdim");
             TimeControl.instance.GameOver();

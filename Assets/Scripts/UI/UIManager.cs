@@ -19,10 +19,17 @@ public class UIManager : MonoBehaviour
     public GameObject selectedCharacter;
     public void Start()
     {
+        Time.timeScale = 1f;
         mainMenuScreen.SetActive(true);
+        inGame.SetActive(false);
+    }
+    private void Update()
+    {
+        Debug.Log(Time.timeScale);
     }
     public void StartGame()
     {
+        Time.timeScale = GameManager.gameSpeed;
         InGame();
         //gameTutorialScreen.SetActive(true);
         gameOverScreen.SetActive(false);
@@ -48,7 +55,7 @@ public class UIManager : MonoBehaviour
     }
     public void InGame()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = GameManager.gameSpeed;
         pauseScreen.SetActive(false);
         backGroundImage.SetActive(false);
         mainScreen.SetActive(false);
@@ -70,6 +77,7 @@ public class UIManager : MonoBehaviour
     }
     public void GameOverScreenToMain()
     {
+        inGame.SetActive(false);
         gameOverScreen.SetActive(false);
         mainMenuScreen.SetActive(true);
     }
@@ -82,6 +90,7 @@ public class UIManager : MonoBehaviour
     public void PauseScreenToMenu()
     {
         Time.timeScale = 1f;
+        inGame.SetActive(false);
         pauseScreen.SetActive(false);
         mainMenuScreen.SetActive(true);
         mainScreen.SetActive(true);
@@ -102,6 +111,7 @@ public class UIManager : MonoBehaviour
     }
     public void GameOverScene()
     {
+        Time.timeScale = 1f;
         gameOverScreen.SetActive(true);
         inGame.SetActive(false);
         TimeControl.instance.GameOver();      

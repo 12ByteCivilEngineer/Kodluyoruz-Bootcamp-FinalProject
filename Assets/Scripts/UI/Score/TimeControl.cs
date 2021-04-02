@@ -53,7 +53,7 @@ public class TimeControl : MonoBehaviour
         gamePlaying = false;
         string timePlayingStr = elapsedTime.ToString("00");
         highScore = PlayerPrefs.GetFloat("HighScore", 0f);
-        if (highScore>elapsedTime)
+        if (highScore<elapsedTime)
         {
             highScore = elapsedTime; 
             PlayerPrefs.SetFloat("HighScore", elapsedTime);
