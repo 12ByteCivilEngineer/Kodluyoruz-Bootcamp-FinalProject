@@ -73,6 +73,7 @@
     <Compile Include="Assets\CubeMovement.cs" />
     <Compile Include="Assets\EnemyMovementController.cs" />
     <Compile Include="Assets\Entity.cs" />
+    <Compile Include="Assets\Glass.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
