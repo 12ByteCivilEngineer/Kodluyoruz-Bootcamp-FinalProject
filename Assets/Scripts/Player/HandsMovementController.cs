@@ -18,7 +18,6 @@ public class HandsMovementController : MonoBehaviour
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
-        collisionDetector = FindObjectOfType<HandCollisionDetector>().gameObject;
     }
 
     public void MoveHand(HandControl handType,float force, Vector3 position)
@@ -30,7 +29,6 @@ public class HandsMovementController : MonoBehaviour
         Vector3 target = hands[i].transform.position + (/*direction * force **/ forceCoefficient*Vector3.up /*/Time.timeScale*/);
         //DoDistanceCheck(i,target);
         hands[i].transform.DOMove(target, moveTime);
-        collisionDetector.transform.position = target;
     }
 
     public void ClimbUp()
