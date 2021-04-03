@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6813,7 +6813,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459272578}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -25978,13 +25978,18 @@ PrefabInstance:
     - target: {fileID: 2656340726279950948, guid: 85ce324f1f9e4d144ad6438933620b76,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2656340726279950948, guid: 85ce324f1f9e4d144ad6438933620b76,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2d73a9587b8d74b10b53e28e1447272e, type: 2}
+    - target: {fileID: 2656340726279950948, guid: 85ce324f1f9e4d144ad6438933620b76,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2656340726279950948, guid: 85ce324f1f9e4d144ad6438933620b76,
         type: 3}
       propertyPath: m_ApplyRootMotion
