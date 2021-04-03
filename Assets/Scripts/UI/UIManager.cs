@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager instance;
     public GameObject settingScreen;   
     public GameObject mainScreen;
     public GameObject backGroundImage;
     public GameObject gameOverScreen;
     public GameObject mainMenuScreen;
     public GameObject pauseScreen;
+    public GameObject winnerScreen;
     public GameObject inGame;
+    public GameObject inGameScene;
     public GameObject shopScreen;
     public GameObject gameTutorialScreen;
     public GameObject characterDancing;
@@ -22,41 +25,21 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         mainMenuScreen.SetActive(true);
         inGame.SetActive(false);
+        if (GameRestart.restartBool==true)
+        {
+            StartGame();
+            GameRestart.restartBool = false;
+        }
+    }
+    public void Awake()
+    {
+        instance = this;
     }
     private void Update()
     {
-        //Debug.Log(Time.timeScale);
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            PlayerPrefs.DeleteKey("Tutorial");
-        }
-
+        Debug.Log(Time.timeScale);
     }
-    public void StartGame()
-    {
-        Debug.Log(PlayerPrefs.HasKey("Tutorial"));
-        Time.timeScale = GameManager.gameSpeed;
-        if (!PlayerPrefs.HasKey("Tutorial"))
-        {
-            
-            gameTutorialScreen.SetActive(true);
-            PlayerPrefs.SetInt("Tutorial", 1);
-        }       
-            InGame();
-        
-                       
-        //gameTutorialScreen.SetActive(true);
-        gameOverScreen.SetActive(false);
-        
-        //Game Start
-        //SceneManager.LoadScene(1);
-        Debug.Log("oyun başlıyor.");
-    }
-    public void TutorialToInGame()
-    {
-        gameTutorialScreen.SetActive(false);
-        InGame();
-    }
+   
     public void Setting()
     {
         StartCoroutine(SettingButtonAnimDelay());
@@ -72,9 +55,19 @@ public class UIManager : MonoBehaviour
         Debug.Log("Çıkış Yapılıyor");
         Application.Quit();
     }
+    public void StartGame()
+    {
+        Time.timeScale = GameManager.gameSpeed;
+        InGame();
+        //gameTutorialScreen.SetActive(true);
+        gameOverScreen.SetActive(false);
+        TimeControl.instance.BeginGame();
+        //Game Start
+        //SceneManager.LoadScene(1);
+        Debug.Log("oyun başlıyor.");
+    }
     public void InGame()
     {
-        TimeControl.instance.BeginGame();
         Time.timeScale = GameManager.gameSpeed;
         pauseScreen.SetActive(false);
         backGroundImage.SetActive(false);
@@ -82,7 +75,8 @@ public class UIManager : MonoBehaviour
         settingScreen.SetActive(false);
         characterDancing.SetActive(false);
         inGame.SetActive(true);
-        //gameTutorialScreen.SetActive(false);
+        inGameScene.SetActive(true);
+        gameTutorialScreen.SetActive(false);
     }
     IEnumerator SettingButtonAnimDelay()
     {
@@ -100,13 +94,17 @@ public class UIManager : MonoBehaviour
         inGame.SetActive(false);
         gameOverScreen.SetActive(false);
         mainMenuScreen.SetActive(true);
+        inGameScene.SetActive(false);
+        mainScreen.SetActive(true);
+        backGroundImage.SetActive(true);
+        characterDancing.SetActive(true);
+        Time.timeScale = 1f;
     }
     public void Pause()
     {
         Time.timeScale = 0f;
         inGame.SetActive(false);
         pauseScreen.SetActive(true);
-        mainMenuScreen.SetActive(false);
     }
     public void PauseScreenToMenu()
     {
@@ -132,9 +130,27 @@ public class UIManager : MonoBehaviour
     }
     public void GameOverScene()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
         gameOverScreen.SetActive(true);
         inGame.SetActive(false);
         TimeControl.instance.GameOver();      
     }
+    public void NextToMainMenu()
+    {
+        winnerScreen.SetActive(false);
+        mainMenuScreen.SetActive(true);
+    }
+    public void NextLevelScreen()
+    {
+        winnerScreen.SetActive(true);
+        inGame.SetActive(false);
+    }
+    public void GameOverRestart()
+    {
+        GameRestart.restartBool = true;
+        gameOverScreen.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
+    
 }
+ 
