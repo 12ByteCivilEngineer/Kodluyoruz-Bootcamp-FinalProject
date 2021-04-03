@@ -67,7 +67,6 @@
     <Compile Include="Assets\CollectObject\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\CollectObject\Scripts\CollectObject.cs" />
     <Compile Include="Assets\CollectObject\Scripts\CollectingScore.cs" />
-    <Compile Include="Assets\CollectObject\Scripts\Değişcek\Coin.cs" />
     <Compile Include="Assets\CollectObject\Scripts\Değişcek\ICollectible.cs" />
     <Compile Include="Assets\CollectObject\Scripts\Değişcek\PlayerController.cs" />
     <Compile Include="Assets\CubeMovement.cs" />
