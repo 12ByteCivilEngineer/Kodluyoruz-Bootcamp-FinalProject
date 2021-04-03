@@ -8,14 +8,12 @@ public class Coin : MonoBehaviour
     public static int numberOfCoins;
     public Text coinText;
     public Text shopCoinText;
-    public Text gameOverText;
     public int coinPoint;  
 
     private void Update()
     {
         coinText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
         shopCoinText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
-        gameOverText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -25,7 +23,6 @@ public class Coin : MonoBehaviour
             PlayerPrefs.SetInt("NumberOfCoins", numberOfCoins);
             coinText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
             shopCoinText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
-            gameOverText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
             Destroy(gameObject);
         }
     }

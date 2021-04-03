@@ -25,37 +25,18 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        //Debug.Log(Time.timeScale);
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            PlayerPrefs.DeleteKey("Tutorial");
-        }
-
+        Debug.Log(Time.timeScale);
     }
     public void StartGame()
     {
-        Debug.Log(PlayerPrefs.HasKey("Tutorial"));
         Time.timeScale = GameManager.gameSpeed;
-        if (!PlayerPrefs.HasKey("Tutorial"))
-        {
-            
-            gameTutorialScreen.SetActive(true);
-            PlayerPrefs.SetInt("Tutorial", 1);
-        }       
-            InGame();
-        
-                       
+        InGame();
         //gameTutorialScreen.SetActive(true);
         gameOverScreen.SetActive(false);
-        
+        TimeControl.instance.BeginGame();
         //Game Start
         //SceneManager.LoadScene(1);
         Debug.Log("oyun başlıyor.");
-    }
-    public void TutorialToInGame()
-    {
-        gameTutorialScreen.SetActive(false);
-        InGame();
     }
     public void Setting()
     {
@@ -74,7 +55,6 @@ public class UIManager : MonoBehaviour
     }
     public void InGame()
     {
-        TimeControl.instance.BeginGame();
         Time.timeScale = GameManager.gameSpeed;
         pauseScreen.SetActive(false);
         backGroundImage.SetActive(false);
@@ -82,7 +62,7 @@ public class UIManager : MonoBehaviour
         settingScreen.SetActive(false);
         characterDancing.SetActive(false);
         inGame.SetActive(true);
-        //gameTutorialScreen.SetActive(false);
+        gameTutorialScreen.SetActive(false);
     }
     IEnumerator SettingButtonAnimDelay()
     {
@@ -106,7 +86,6 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
         inGame.SetActive(false);
         pauseScreen.SetActive(true);
-        mainMenuScreen.SetActive(false);
     }
     public void PauseScreenToMenu()
     {
