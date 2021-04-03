@@ -10,6 +10,8 @@ public class TimeControl : MonoBehaviour
     public Text timeCounter;
     public Text gameOverText;
     public Text highScoreText;
+    public Text winnerText;
+    public Text winnerHighScoreText;
 
     bool gamePlaying;
     float highScore;
@@ -57,7 +59,9 @@ public class TimeControl : MonoBehaviour
             PlayerPrefs.SetFloat("HighScore", elapsedTime);
         }
         gameOverText.text ="Score : "+ elapsedTime.ToString("00");
+        winnerText.text= "Score : " + elapsedTime.ToString("00");
         highScoreText.text = "HighScore : " + highScore.ToString("00");
+        winnerHighScoreText.text = "HighScore : " + highScore.ToString("00");
     }
 
 }

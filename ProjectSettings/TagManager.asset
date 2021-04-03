@@ -8,6 +8,10 @@ TagManager:
   - FxTemporaire
   - trap
   - Jetpack
+<<<<<<< HEAD
+=======
+  - finish
+>>>>>>> Oguz2
   layers:
   - Default
   - TransparentFX

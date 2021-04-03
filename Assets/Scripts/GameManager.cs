@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject gameLostText;
-    [SerializeField] float gameSpeed = 1f;
+    public static float gameSpeed = 2f;
     private void Awake()
     {
         Time.timeScale = gameSpeed;
