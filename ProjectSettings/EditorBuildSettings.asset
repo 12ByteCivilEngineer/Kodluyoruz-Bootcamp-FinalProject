@@ -4,12 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/GameSceneMainEski.unity
-=======
-    path: Assets/Scenes/GameSceneMain.unity
->>>>>>> Oguz2
-    guid: 0fc344310a4184670867525cd68a101f
+  m_Scenes: []
   m_configObjects: {}
