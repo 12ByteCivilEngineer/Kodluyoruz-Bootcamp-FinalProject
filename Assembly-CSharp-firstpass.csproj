@@ -616,9 +616,6 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
@@ -654,9 +651,6 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>

@@ -68,6 +68,8 @@
     <Compile Include="Assets\CollectObject\Scripts\Değişcek\Coin.cs" />
     <Compile Include="Assets\CollectObject\Scripts\Değişcek\ICollectible.cs" />
     <Compile Include="Assets\CollectObject\Scripts\Değişcek\PlayerController.cs" />
+    <Compile Include="Assets\CubeMovement.cs" />
+    <Compile Include="Assets\EnemyMovementController.cs" />
     <Compile Include="Assets\Entity.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
@@ -150,23 +152,35 @@
     <Compile Include="Assets\PlayerInputController.cs" />
     <Compile Include="Assets\PlayerMovementController.cs" />
     <Compile Include="Assets\Sabit.cs" />
-    <Compile Include="Assets\Script\Music\SoundManager.cs" />
-    <Compile Include="Assets\Script\UI\LevelBar.cs" />
-    <Compile Include="Assets\Script\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Fall\Billboard.cs" />
+    <Compile Include="Assets\Scripts\Fall\FallControl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameSceneManager.cs" />
     <Compile Include="Assets\Scripts\HandCollisionDetector.cs" />
     <Compile Include="Assets\Scripts\Jetpack\JetpackControl.cs" />
+    <Compile Include="Assets\Scripts\Music\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\CubeMovement.cs" />
     <Compile Include="Assets\Scripts\Not in Use\HandMovement.cs" />
     <Compile Include="Assets\Scripts\Not in Use\LeftHand.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\PlayerInputController.cs" />
     <Compile Include="Assets\Scripts\Not in Use\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Not in Use\PlayerMovementController.cs" />
     <Compile Include="Assets\Scripts\Not in Use\RightHand.cs" />
     <Compile Include="Assets\Scripts\Player\FlyControl.cs" />
     <Compile Include="Assets\Scripts\Player\HandCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\Player\HandsMovementController.cs" />
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Rotate\Rotate.cs" />
+    <Compile Include="Assets\Scripts\Rotate\RotateInput.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelBar.cs" />
+    <Compile Include="Assets\Scripts\UI\Score\Coin.cs" />
+    <Compile Include="Assets\Scripts\UI\Score\TimeControl.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopMenu\CharacterBuy.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopMenu\CharacterSelect.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopMenu\InGameCharacterSelect.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -201,11 +215,13 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\AurynSky\Gems Ultimate Pack\READ ME.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Modern UI Pack\Read Me.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -215,10 +231,12 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\SimpleSky\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\PolygonCity\Change_Log.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
@@ -769,9 +787,6 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
@@ -807,9 +822,6 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
