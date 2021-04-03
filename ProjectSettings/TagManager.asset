@@ -9,6 +9,10 @@ TagManager:
   - trap
   - Coins
   - Block
+<<<<<<< Updated upstream
+=======
+  - eight
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ public class HandsMovementController : MonoBehaviour
     [SerializeField] float forceCoefficient = 1f;
     [SerializeField] float maxAllowedHandGap = 2.47f;
     GameObject collisionDetector;
-    bool isLeft = true;
+    public static bool isLeft = true;
     bool isMoving = false;
 
     private void Awake()
