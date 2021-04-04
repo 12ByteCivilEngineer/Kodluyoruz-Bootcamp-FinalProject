@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimeControl : MonoBehaviour
@@ -26,6 +27,7 @@ public class TimeControl : MonoBehaviour
         //timeCounter.text = "Time: 00:00.00";
         //timerGoing = false;
         TimeControl.instance.BeginTimer(); //Start
+        //PlayerPrefs.DeleteKey("HighScore");
         
     }
     private void Update()
@@ -50,16 +52,65 @@ public class TimeControl : MonoBehaviour
    
     public void GameOver()
     {
-        gamePlaying = false;
-        string timePlayingStr = elapsedTime.ToString("00");
-        highScore = PlayerPrefs.GetFloat("HighScore", 0f);
-        if (highScore<elapsedTime)
+        string highScoreStrings = null;
+        float score = (1f / elapsedTime)*1000;
+        int levelNo = SceneManager.GetActiveScene().buildIndex+1;
+        switch (levelNo)
         {
-            highScore = elapsedTime; 
-            PlayerPrefs.SetFloat("HighScore", elapsedTime);
+            case 1:
+                highScoreStrings = "HighScore1";
+                break;
+            case 2:
+                highScoreStrings = "HighScore2";
+                break;
+            case 3:
+                highScoreStrings = "HighScore3";
+                break;
+            case 4:
+                highScoreStrings = "HighScore4";
+                break;
+            case 5:
+                highScoreStrings = "HighScore5";
+                break;
+            case 6:
+                highScoreStrings = "HighScore6";
+                break;
+            case 7:
+                highScoreStrings = "HighScore7";
+                break;
+            case 8:
+                highScoreStrings = "HighScore8";
+                break;
+
+            default:
+                break;
         }
-        gameOverText.text ="Score : "+ elapsedTime.ToString("00");
-        winnerText.text= "Score : " + elapsedTime.ToString("00");
+        gamePlaying = false;
+        //string timePlayingStr = elapsedTime.ToString("00");
+        highScore = PlayerPrefs.GetFloat(highScoreStrings, 0f);
+        if (highScore<score)
+        {
+            highScore = score; 
+            PlayerPrefs.SetFloat(highScoreStrings, score);
+        }
+        gameOverText.text ="Score : "+ score.ToString("00");
+        winnerText.text= "Score : " + score.ToString("00");
+        highScoreText.text = "HighScore : " + highScore.ToString("00");
+        winnerHighScoreText.text = "HighScore : " + highScore.ToString("00");
+    }
+    public void NextLevelScore()
+    {
+        float score = (1f / elapsedTime) * 1000;
+        gamePlaying = false;
+        //string timePlayingStr = elapsedTime.ToString("00");
+        highScore = PlayerPrefs.GetFloat("NextHighScore", 0f);
+        if (highScore < score)
+        {
+            highScore = score;
+            PlayerPrefs.SetFloat("NextHighScore", score);
+        }
+        gameOverText.text = "Score : " + score.ToString("00");
+        winnerText.text = "Score : " + score.ToString("00");
         highScoreText.text = "HighScore : " + highScore.ToString("00");
         winnerHighScoreText.text = "HighScore : " + highScore.ToString("00");
     }

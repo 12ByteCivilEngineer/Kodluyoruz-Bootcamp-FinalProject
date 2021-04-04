@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
+    public LevelBar levelBar;
     public GameObject settingScreen;   
     public GameObject mainScreen;
     public GameObject backGroundImage;
@@ -23,11 +24,11 @@ public class UIManager : MonoBehaviour
     public void Start()
     {
         Time.timeScale = 1f;
-        mainMenuScreen.SetActive(true);
-        inGame.SetActive(false);
+        //mainMenuScreen.SetActive(true);
+        
         if (GameRestart.restartBool==true)
         {
-            StartGame();
+            StartGame();            
             GameRestart.restartBool = false;
         }
     }
@@ -89,6 +90,14 @@ public class UIManager : MonoBehaviour
     public void NextLevel()
     {
         Debug.Log("Next Level!");
+        SceneManager.LoadScene(1);
+        inGame.SetActive(true);
+        inGameScene.SetActive(true);
+        TimeControl.instance.BeginGame();
+        levelBar.SetLevelText();
+        GameRestart.restartBool = true;
+        //PlayerPrefs.DeleteKey("HighScore");
+       
     }
     public void GameOverScreenToMain()
     {
