@@ -153,7 +153,7 @@
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\PlayerInputController.cs" />
     <Compile Include="Assets\PlayerMovementController.cs" />
-    <Compile Include="Assets\Resources\Build\BuildManager.cs" />
+    <Compile Include="Assets\Prefabs\DoguPrefabs\JetpackControl.cs" />
     <Compile Include="Assets\Resources\Build\BuildSpawner.cs" />
     <Compile Include="Assets\Sabit.cs" />
     <Compile Include="Assets\Scripts\Fall\Billboard.cs" />
