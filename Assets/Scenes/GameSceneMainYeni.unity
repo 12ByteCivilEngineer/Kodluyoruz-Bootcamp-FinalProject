@@ -30041,12 +30041,12 @@ PrefabInstance:
     - target: {fileID: 7556024043015201821, guid: 65bfb6710624ea642b9033ddec77612b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 123.3
+      value: 93.4
       objectReference: {fileID: 0}
     - target: {fileID: 7556024043015201821, guid: 65bfb6710624ea642b9033ddec77612b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -66.8
+      value: -68.84
       objectReference: {fileID: 0}
     - target: {fileID: 7556024043015201821, guid: 65bfb6710624ea642b9033ddec77612b,
         type: 3}
@@ -33656,18 +33656,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2656340726817916569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2656340726817916583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb919218992e2b64b8ea967e0e83b829, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2656340726817916583
 GameObject:
   m_ObjectHideFlags: 0
@@ -33680,7 +33668,6 @@ GameObject:
   - component: {fileID: 6383748785987788780}
   - component: {fileID: 8388558874259319015}
   - component: {fileID: 8388558874259319012}
-  - component: {fileID: 2656340726817916569}
   m_Layer: 0
   m_Name: Hand_R
   m_TagString: Untagged

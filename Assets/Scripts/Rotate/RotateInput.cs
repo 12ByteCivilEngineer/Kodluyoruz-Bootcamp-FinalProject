@@ -11,7 +11,7 @@ public class RotateInput : MonoBehaviour
 
     public void Swipe()
     {
-
+#if UNITY_EDITOR
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -37,7 +37,38 @@ public class RotateInput : MonoBehaviour
             }
         }
 
+#elif UNITY_ANDROID || UNITY_IOS
+
+        if (Input.touches.Length > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
+            {
+                firstPos = touch.position.x;
+            }
+            if (touch.phase == TouchPhase.Ended)
+            {
+                lastPos = touch.position.x;
+                swipeDirection = lastPos - firstPos;
+
+                if (swipeDirection < -50f)
+                {
+                    direction = "left";
+                }
+                else if (swipeDirection > 50f)
+                {
+                    direction = "right";
+                }
+                else
+                {
+                    direction = "none";
+                }
+            }
+        }
+#endif
+
 
 
     }
 }
+

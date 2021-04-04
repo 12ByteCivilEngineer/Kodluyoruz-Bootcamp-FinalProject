@@ -12,5 +12,9 @@ public class GameSceneManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 }
