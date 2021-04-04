@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager instance;
     public GameObject settingScreen;   
     public GameObject mainScreen;
     public GameObject backGroundImage;
     public GameObject gameOverScreen;
     public GameObject mainMenuScreen;
     public GameObject pauseScreen;
+    public GameObject winnerScreen;
     public GameObject inGame;
+    public GameObject inGameScene;
     public GameObject shopScreen;
     public GameObject gameTutorialScreen;
     public GameObject characterDancing;
@@ -22,10 +25,36 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         mainMenuScreen.SetActive(true);
         inGame.SetActive(false);
+        if (GameRestart.restartBool==true)
+        {
+            StartGame();
+            GameRestart.restartBool = false;
+        }
+    }
+    public void Awake()
+    {
+        instance = this;
     }
     private void Update()
     {
         Debug.Log(Time.timeScale);
+    }
+   
+    public void Setting()
+    {
+        StartCoroutine(SettingButtonAnimDelay());
+    }
+    public void SettingtoMenu()
+    {
+        //mainScreen.SetActive(true);
+        //settingScreen.SetActive(false);
+        //characterDancing.SetActive(true);
+        SceneManager.LoadScene(0);
+    }    
+    public void Exit()
+    {
+        Debug.Log("Çıkış Yapılıyor");
+        Application.Quit();
     }
     public void StartGame()
     {
@@ -38,21 +67,6 @@ public class UIManager : MonoBehaviour
         //SceneManager.LoadScene(1);
         Debug.Log("oyun başlıyor.");
     }
-    public void Setting()
-    {
-        StartCoroutine(SettingButtonAnimDelay());
-    }
-    public void SettingtoMenu()
-    {
-        mainScreen.SetActive(true);
-        settingScreen.SetActive(false);
-        characterDancing.SetActive(true);
-    }    
-    public void Exit()
-    {
-        Debug.Log("Çıkış Yapılıyor");
-        Application.Quit();
-    }
     public void InGame()
     {
         Time.timeScale = GameManager.gameSpeed;
@@ -62,6 +76,7 @@ public class UIManager : MonoBehaviour
         settingScreen.SetActive(false);
         characterDancing.SetActive(false);
         inGame.SetActive(true);
+        inGameScene.SetActive(true);
         gameTutorialScreen.SetActive(false);
     }
     IEnumerator SettingButtonAnimDelay()
@@ -77,9 +92,15 @@ public class UIManager : MonoBehaviour
     }
     public void GameOverScreenToMain()
     {
-        inGame.SetActive(false);
-        gameOverScreen.SetActive(false);
-        mainMenuScreen.SetActive(true);
+        //inGame.SetActive(false);
+        //gameOverScreen.SetActive(false);
+        //mainMenuScreen.SetActive(true);
+        //inGameScene.SetActive(false);
+        //mainScreen.SetActive(true);
+        //backGroundImage.SetActive(true);
+        //characterDancing.SetActive(true);
+        //Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
     public void Pause()
     {
@@ -89,13 +110,14 @@ public class UIManager : MonoBehaviour
     }
     public void PauseScreenToMenu()
     {
-        Time.timeScale = 1f;
-        inGame.SetActive(false);
-        pauseScreen.SetActive(false);
-        mainMenuScreen.SetActive(true);
-        mainScreen.SetActive(true);
-        backGroundImage.SetActive(true);
-        characterDancing.SetActive(true);
+        //Time.timeScale = 1f;
+        //inGame.SetActive(false);
+        //pauseScreen.SetActive(false);
+        //mainMenuScreen.SetActive(true);
+        //mainScreen.SetActive(true);
+        //backGroundImage.SetActive(true);
+        //characterDancing.SetActive(true);
+        SceneManager.LoadScene(0);
     }
     public void ShopScene()
     {
@@ -105,15 +127,35 @@ public class UIManager : MonoBehaviour
     }
     public void ShopScreenToMenu()
     {
-        selectedCharacter.SetActive(false);
-        shopScreen.SetActive(false);
-        mainMenuScreen.SetActive(true);
+        //selectedCharacter.SetActive(false);
+        //shopScreen.SetActive(false);
+        //mainMenuScreen.SetActive(true);
+        SceneManager.LoadScene(0);
     }
     public void GameOverScene()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 0f;
         gameOverScreen.SetActive(true);
         inGame.SetActive(false);
         TimeControl.instance.GameOver();      
     }
+    public void NextToMainMenu()
+    {
+        //winnerScreen.SetActive(false);
+        //mainMenuScreen.SetActive(true);
+        SceneManager.LoadScene(0);
+    }
+    public void NextLevelScreen()
+    {
+        winnerScreen.SetActive(true);
+        inGame.SetActive(false);
+    }
+    public void GameOverRestart()
+    {
+        GameRestart.restartBool = true;
+        gameOverScreen.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
+    
 }
+ 

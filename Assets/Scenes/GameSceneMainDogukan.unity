@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17283,7 +17283,9 @@ MonoBehaviour:
   gameOverScreen: {fileID: 546838377}
   mainMenuScreen: {fileID: 1506867182}
   pauseScreen: {fileID: 885302696}
+  winnerScreen: {fileID: 168594664}
   inGame: {fileID: 1177053262}
+  inGameScene: {fileID: 166008649}
   shopScreen: {fileID: 1489214291}
   gameTutorialScreen: {fileID: 1883005659}
   characterDancing: {fileID: 2019264188}
@@ -22840,6 +22842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinText: {fileID: 1095611502}
   shopCoinText: {fileID: 1765516986}
+  gameOverText: {fileID: 0}
   coinPoint: 500
 --- !u!54 &1645605867
 Rigidbody:
@@ -27018,6 +27021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinText: {fileID: 1095611502}
   shopCoinText: {fileID: 1765516986}
+  gameOverText: {fileID: 0}
   coinPoint: 500
 --- !u!1 &1875208669
 GameObject:

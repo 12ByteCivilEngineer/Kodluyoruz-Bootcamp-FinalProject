@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class UISceneManager : MonoBehaviour
 {
+    static public UISceneManager instance;
     public GameObject uiScene;
     public GameObject inGameScene;
 
-    private void Start()
+    public void Start()
     {
-        inGameScene.SetActive(false);
+        
     }
     public void StartButtonClick()
     {
