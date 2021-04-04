@@ -11,6 +11,8 @@ TagManager:
   - trap
   - Jetpack
   - CoinTarget
+  - GameOverCoinText
+  - ShopCoinText
   layers:
   - Default
   - TransparentFX

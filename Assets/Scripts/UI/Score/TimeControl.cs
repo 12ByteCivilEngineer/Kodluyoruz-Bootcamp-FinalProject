@@ -34,7 +34,7 @@ public class TimeControl : MonoBehaviour
     {
         if (gamePlaying)
         {
-            elapsedTime = Time.time- startTime;
+            elapsedTime = (Time.time - startTime) / GameManager.gameSpeed;
             //timePlaying = TimeSpan.FromSeconds(elapsedTime);
             string timePlayingStr = "Time: " + elapsedTime.ToString("00");
             timeCounter.text = timePlayingStr;

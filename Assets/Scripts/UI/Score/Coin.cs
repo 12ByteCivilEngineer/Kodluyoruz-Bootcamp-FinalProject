@@ -21,6 +21,7 @@ public class Coin : MonoBehaviour
     [SerializeField] Vector3 scaleRatio = new Vector3(0.01f, 0.01f, 0.01f);
     [SerializeField] Vector3 coinPosIncrement = new Vector3(8f, 14f, 0f);
     Vector3 basePos;
+    [SerializeField] float animTime = 2f;
     private void Start()
     {
         mainCam = Camera.main;
@@ -32,10 +33,10 @@ public class Coin : MonoBehaviour
         gameOverText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
         if (dummy)
         {
-            timer += Time.deltaTime;
-            transform.position = Vector3.Lerp(basePos, new Vector3 (mainCam.transform.position.x, mainCam.transform.position.y,basePos.z) + coinPosIncrement, timer / 3f);
-            transform.localScale = Vector3.Lerp(new Vector3(1f,1f,1f), scaleRatio, timer / 3f);
-            transform.Rotate(0f, 0f, rotSpeed * Time.deltaTime);
+            timer += Time.unscaledDeltaTime;
+            transform.position = Vector3.Lerp(basePos, new Vector3 (mainCam.transform.position.x, mainCam.transform.position.y,basePos.z) + coinPosIncrement, timer / animTime);
+            transform.localScale = Vector3.Lerp(new Vector3(1f,1f,1f), scaleRatio, timer / animTime);
+            transform.Rotate(0f, 0f, rotSpeed * Time.unscaledDeltaTime);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -45,7 +46,7 @@ public class Coin : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(false);
             transform.GetChild(2).gameObject.SetActive(true);
             basePos = transform.position;
-            if (target== null) { target = GameObject.FindGameObjectWithTag("CoinTarget").transform; }
+            //if (target== null) { target = GameObject.FindGameObjectWithTag("CoinTarget").transform; }
             coinCollected = true;
             dummy = true;
             numberOfCoins = PlayerPrefs.GetInt("NumberOfCoins") + coinPoint;
@@ -53,7 +54,7 @@ public class Coin : MonoBehaviour
             coinText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
             shopCoinText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
             gameOverText.text = PlayerPrefs.GetInt("NumberOfCoins").ToString();
-            Destroy(gameObject,3f);
+            Destroy(gameObject, animTime * GameManager.gameSpeed);
         }
     }
 }
