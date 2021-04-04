@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject gameLostText;
     public static float gameSpeed = 2f;
     private void Awake()
     {
         Time.timeScale = gameSpeed;
-        //SetUpSingleton();
-        gameLostText.SetActive(false);
+        //SetUpSingleton();  
     }
     private bool isGameLost=false;
     public bool IsGameLost
@@ -25,7 +23,7 @@ public class GameManager : MonoBehaviour
             {
                 if (value)
                 {
-                    gameLostText.SetActive(true);
+                    StartCoroutine(GameOverSceneLoading());
                     HandCollisionHandler[] handCollisionHandlers = FindObjectsOfType<HandCollisionHandler>();
                     foreach (HandCollisionHandler element in handCollisionHandlers)
                     {
@@ -35,5 +33,13 @@ public class GameManager : MonoBehaviour
                 isGameLost = value;
             }
         }
+    }
+    IEnumerator GameOverSceneLoading()
+    {
+        yield return new WaitForSeconds(3f);
+        Time.timeScale = 0f;
+        TimeControl.instance.GameOver();
+        UIManager.instance.GameOverScene();
+
     }
 }

@@ -11,6 +11,7 @@ public class Finish : MonoBehaviour
         {
             Time.timeScale = 0f;
             winnerScreen.SetActive(true);
+            UIManager.instance.NextLevel();
             Debug.Log("Değdim");
             TimeControl.instance.GameOver();
         }
