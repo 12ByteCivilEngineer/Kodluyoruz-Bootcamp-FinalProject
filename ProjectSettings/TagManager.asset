@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Block
+  - Coins
+  - eight
+  - FxTemporaire
+  - trap
+  - Jetpack
+  - CoinTarget
   layers:
   - Default
   - TransparentFX
