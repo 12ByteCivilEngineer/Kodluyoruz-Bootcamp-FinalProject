@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BuildSpawner : MonoBehaviour
 {
+    
+    [SerializeField]
     Transform buildContainer;
     
     public static GameObject[] buildObjects;
@@ -16,12 +18,6 @@ public class BuildSpawner : MonoBehaviour
     {
         buildObjects = Resources.LoadAll<GameObject>("Prefabs");
     }
-    
-
-    public BuildSpawner(Transform buildContainer)
-    {
-        this.buildContainer = buildContainer;
-    }
 
     public void Spawn()
     {
@@ -32,13 +28,15 @@ public class BuildSpawner : MonoBehaviour
         
         if(numSpawned == 0)
         {
-            build.transform.position = new Vector3(0f,0f,0f);
-
+            Debug.Log(buildContainer.position);
+            build.transform.position = buildContainer.position;
         }
         else
         {
-            build.transform.position = new Vector3(0f,numSpawned * 5.40f,0f);
-        }
+            build.transform.position = new Vector3(buildContainer.position.x,numSpawned * 5.40f,buildContainer.position.z);
+            build.transform.rotation = Quaternion.Euler(new Vector3(0, numSpawned * 45, 0));
+            
+        }   
         
         numSpawned++;
         
