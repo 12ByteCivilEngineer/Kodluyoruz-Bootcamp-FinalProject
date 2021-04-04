@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
@@ -10,10 +11,11 @@ public class Finish : MonoBehaviour
         if (other.CompareTag("Finish"))
         {
             Time.timeScale = 0f;
-            winnerScreen.SetActive(true);
-            UIManager.instance.NextLevel();
+            winnerScreen.SetActive(true);            
             Debug.Log("Değdim");
+            
             TimeControl.instance.GameOver();
+           
         }
     }
 }
