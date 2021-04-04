@@ -7,7 +7,7 @@ public class JetpackControl : MonoBehaviour
 {
     public GameObject[] hands;
     public float flyTime = 10;
-    public bool isFly = false;
+    HandsMovementController handMovementController;
 
     [SerializeField]
     GameObject jetpack;
@@ -17,6 +17,7 @@ public class JetpackControl : MonoBehaviour
     private void Start()
     {
         jetpack.SetActive(false);
+        handMovementController = FindObjectOfType<HandsMovementController>();
     }
 
     private void Update()
@@ -44,14 +45,14 @@ public class JetpackControl : MonoBehaviour
 
     void ActivateJetpack()
     {
-        isFly = true;
+        handMovementController.isFly = true;
         jetpack.SetActive(true);
         Fly();
     }
 
     void InActivateJetpack()
     {
-        isFly = false;
+        handMovementController.isFly = false;
         jetpack.SetActive(false);
 
     }

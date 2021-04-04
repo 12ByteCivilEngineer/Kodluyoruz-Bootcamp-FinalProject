@@ -14,6 +14,7 @@ public class HandsMovementController : MonoBehaviour
     GameObject collisionDetector;
     public static bool isLeft = true;
     bool isMoving = false;
+    public bool isFly = false;
 
     private void Awake()
     {
@@ -36,7 +37,7 @@ public class HandsMovementController : MonoBehaviour
         int i = 0;
         if (isLeft) { i = 0; }
         else { i = 1; }
-        if (!isMoving)
+        if (!isMoving && !isFly)
         {
             isMoving = true;
             StartCoroutine(DoingMovement());
@@ -44,7 +45,6 @@ public class HandsMovementController : MonoBehaviour
             hands[i].transform.DOMove(target, moveTime);
             isLeft = !isLeft;
         }
-
     }
     IEnumerator DoingMovement()
     {
