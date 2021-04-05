@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -506,6 +506,10 @@ PrefabInstance:
     - target: {fileID: 100010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
       propertyPath: m_Name
       value: SkyDome
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
       propertyPath: m_RootOrder
@@ -4392,6 +4396,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Star
       objectReference: {fileID: 0}
+    - target: {fileID: 8057397974485305401, guid: 4ca38dd825c7dde4aa59c9b50c802ee2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8057397974485305402, guid: 4ca38dd825c7dde4aa59c9b50c802ee2,
         type: 3}
       propertyPath: animTime
@@ -5633,6 +5642,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Clouds
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402846065439549348, guid: e5b9fa6cb6c70450f9f21ccc5f507cde,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4270869086662877850, guid: e5b9fa6cb6c70450f9f21ccc5f507cde,
         type: 3}
@@ -23123,6 +23137,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Skyline_01 (1) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4732938916313635852, guid: 15cf36579b71f4713ae393ba03e265e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15cf36579b71f4713ae393ba03e265e9, type: 3}
 --- !u!4 &1546858249 stripped
@@ -31135,6 +31154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bina3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: db737d0cde144cf4481085fa89cc23ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db737d0cde144cf4481085fa89cc23ce, type: 3}
