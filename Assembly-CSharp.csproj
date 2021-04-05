@@ -157,6 +157,7 @@
     <Compile Include="Assets\Prefabs\DoguPrefabs\JetpackControl.cs" />
     <Compile Include="Assets\Resources\Build\BuildSpawner.cs" />
     <Compile Include="Assets\Sabit.cs" />
+    <Compile Include="Assets\Scripts\Camera\PlayerTakip.cs" />
     <Compile Include="Assets\Scripts\Fall\Billboard.cs" />
     <Compile Include="Assets\Scripts\Fall\FallControl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -175,8 +176,8 @@
     <Compile Include="Assets\Scripts\Player\HandCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\Player\HandsMovementController.cs" />
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
-    <Compile Include="Assets\Scripts\Player\vakum.cs" />
-    <Compile Include="Assets\Scripts\Player\vakum1.cs" />
+    <Compile Include="Assets\Scripts\Player\Vakum\Vakum.cs" />
+    <Compile Include="Assets\Scripts\Player\Vakum\Vakum1.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimations.cs" />
     <Compile Include="Assets\Scripts\Rotate\Rotate.cs" />
     <Compile Include="Assets\Scripts\Rotate\RotateInput.cs" />
