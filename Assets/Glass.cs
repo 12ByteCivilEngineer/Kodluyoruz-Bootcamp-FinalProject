@@ -23,7 +23,7 @@ public class Glass : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && !FlyControl.FlyStatu)
         {
             FindObjectOfType<GameManager>().IsGameLost = true;
             // GAME OVER
