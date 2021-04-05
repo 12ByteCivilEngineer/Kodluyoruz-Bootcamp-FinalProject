@@ -21,17 +21,21 @@ public class FallControl : MonoBehaviour
 
     void BreakTime()
     {
-        time = time + Time.deltaTime;
-        if (Input.GetButton("Fire1"))
+        if (!FlyControl.FlyStatu)
         {
-            time = 0;
-        }
+            time = time + Time.deltaTime;
+            if (Input.GetButton("Fire1"))
+            {
+                time = 0;
+            }
 
-        if (time >= 5)
-        {
-            Fall();
+            if (time >= 5)
+            {
+                Fall();
+            }
+            Bar(time);
         }
-        Bar(time);
+        
     }
 
     void Fall()

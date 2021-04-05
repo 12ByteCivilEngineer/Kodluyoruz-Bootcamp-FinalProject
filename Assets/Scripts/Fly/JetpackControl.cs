@@ -30,7 +30,7 @@ public class JetpackControl : MonoBehaviour
         if (time <= 0)
         {
             InActivateJetpack();
-            
+
         }
     }
 
@@ -45,14 +45,14 @@ public class JetpackControl : MonoBehaviour
 
     void ActivateJetpack()
     {
-        handMovementController.isFly = true;
-        jetpack.SetActive(true);
+        FlyControl.FlyStatu = true;
+            jetpack.SetActive(true);
         Fly();
     }
 
     void InActivateJetpack()
     {
-        handMovementController.isFly = false;
+        FlyControl.FlyStatu = false;
         jetpack.SetActive(false);
 
     }
