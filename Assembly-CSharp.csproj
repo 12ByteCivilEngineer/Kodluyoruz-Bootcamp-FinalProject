@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cinemachine.cs" />
     <Compile Include="Assets\CollectObject\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\CollectObject\Scripts\CollectObject.cs" />
     <Compile Include="Assets\CollectObject\Scripts\CollectingScore.cs" />
@@ -795,6 +796,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/aslihanaltin/Documents/GitHub/FinalProject/mainproject/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>/Users/aslihanaltin/Documents/GitHub/FinalProject/mainproject/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>/Users/aslihanaltin/Documents/GitHub/FinalProject/mainproject/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
@@ -831,6 +835,9 @@
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>/Users/aslihanaltin/Documents/GitHub/FinalProject/mainproject/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>/Users/aslihanaltin/Documents/GitHub/FinalProject/mainproject/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>/Users/aslihanaltin/Documents/GitHub/FinalProject/mainproject/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
@@ -842,12 +849,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>/Users/aslihanaltin/Documents/GitHub/FinalProject/mainproject/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>/Users/aslihanaltin/Documents/GitHub/FinalProject/mainproject/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>/Users/aslihanaltin/Documents/GitHub/FinalProject/mainproject/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
