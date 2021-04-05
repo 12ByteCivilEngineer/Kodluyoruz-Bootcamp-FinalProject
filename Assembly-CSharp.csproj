@@ -175,6 +175,8 @@
     <Compile Include="Assets\Scripts\Player\HandCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\Player\HandsMovementController.cs" />
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
+    <Compile Include="Assets\Scripts\Player\vakum.cs" />
+    <Compile Include="Assets\Scripts\Player\vakum1.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimations.cs" />
     <Compile Include="Assets\Scripts\Rotate\Rotate.cs" />
     <Compile Include="Assets\Scripts\Rotate\RotateInput.cs" />
