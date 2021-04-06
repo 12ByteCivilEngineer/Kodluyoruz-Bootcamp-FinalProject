@@ -12,13 +12,12 @@ public class HandsMovementController : MonoBehaviour
     [SerializeField] float forceCoefficient = 1f;
     [SerializeField] float maxAllowedHandGap = 2.47f;
     GameObject collisionDetector;
-    bool isLeft = true;
+    public static bool isLeft = true;
     bool isMoving = false;
 
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
-        collisionDetector = FindObjectOfType<HandCollisionDetector>().gameObject;
     }
 
     public void MoveHand(HandControl handType,float force, Vector3 position)
@@ -30,7 +29,6 @@ public class HandsMovementController : MonoBehaviour
         Vector3 target = hands[i].transform.position + (/*direction * force **/ forceCoefficient*Vector3.up /*/Time.timeScale*/);
         //DoDistanceCheck(i,target);
         hands[i].transform.DOMove(target, moveTime);
-        collisionDetector.transform.position = target;
     }
 
     public void ClimbUp()
@@ -38,7 +36,7 @@ public class HandsMovementController : MonoBehaviour
         int i = 0;
         if (isLeft) { i = 0; }
         else { i = 1; }
-        if (!isMoving)
+        if (!isMoving && !FlyControl.FlyStatu)
         {
             isMoving = true;
             StartCoroutine(DoingMovement());
@@ -46,7 +44,6 @@ public class HandsMovementController : MonoBehaviour
             hands[i].transform.DOMove(target, moveTime);
             isLeft = !isLeft;
         }
-
     }
     IEnumerator DoingMovement()
     {

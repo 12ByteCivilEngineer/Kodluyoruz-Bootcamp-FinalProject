@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class LevelBar : MonoBehaviour
 {
     [SerializeField]
@@ -19,16 +19,21 @@ public class LevelBar : MonoBehaviour
 
     private Vector3 endLinePosion;
     private float fullDistance;
+    
 
     private void Start()
     {
         endLinePosion = endLineTransform.position;
         fullDistance = GetDistance();
+        SetLevelText();
     }
-    public void SetLevelText(int level)
+    public void SetLevelText()
     {
+        int level = SceneManager.GetActiveScene().buildIndex+1;
         uiStartText.text = level.ToString();
         uiNextText.text = (level + 1).ToString();
+        
+        
     }
     private float GetDistance()
     {

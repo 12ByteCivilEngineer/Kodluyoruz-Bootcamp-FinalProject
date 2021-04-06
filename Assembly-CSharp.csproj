@@ -65,12 +65,12 @@
     <Compile Include="Assets\CollectObject\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\CollectObject\Scripts\CollectObject.cs" />
     <Compile Include="Assets\CollectObject\Scripts\CollectingScore.cs" />
-    <Compile Include="Assets\CollectObject\Scripts\Değişcek\Coin.cs" />
     <Compile Include="Assets\CollectObject\Scripts\Değişcek\ICollectible.cs" />
     <Compile Include="Assets\CollectObject\Scripts\Değişcek\PlayerController.cs" />
     <Compile Include="Assets\CubeMovement.cs" />
     <Compile Include="Assets\EnemyMovementController.cs" />
     <Compile Include="Assets\Entity.cs" />
+    <Compile Include="Assets\Glass.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
@@ -149,15 +149,20 @@
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowDragger.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManagerEditor.cs" />
+    <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\PlayerInputController.cs" />
     <Compile Include="Assets\PlayerMovementController.cs" />
+    <Compile Include="Assets\Resources\Build\BuildSpawner.cs" />
     <Compile Include="Assets\Sabit.cs" />
     <Compile Include="Assets\Scripts\Fall\Billboard.cs" />
     <Compile Include="Assets\Scripts\Fall\FallControl.cs" />
+    <Compile Include="Assets\Scripts\Fall\GlassFall.cs" />
+    <Compile Include="Assets\Scripts\Fall\Pavement.cs" />
+    <Compile Include="Assets\Scripts\Fly\FlyControl.cs" />
+    <Compile Include="Assets\Scripts\Fly\JetpackControl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameSceneManager.cs" />
     <Compile Include="Assets\Scripts\HandCollisionDetector.cs" />
-    <Compile Include="Assets\Scripts\Jetpack\JetpackControl.cs" />
     <Compile Include="Assets\Scripts\Music\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Not in Use\CubeMovement.cs" />
     <Compile Include="Assets\Scripts\Not in Use\HandMovement.cs" />
@@ -166,14 +171,15 @@
     <Compile Include="Assets\Scripts\Not in Use\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Not in Use\PlayerMovementController.cs" />
     <Compile Include="Assets\Scripts\Not in Use\RightHand.cs" />
-    <Compile Include="Assets\Scripts\Player\FlyControl.cs" />
+    <Compile Include="Assets\Scripts\Player\Finish.cs" />
     <Compile Include="Assets\Scripts\Player\HandCollisionHandler.cs" />
     <Compile Include="Assets\Scripts\Player\HandsMovementController.cs" />
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
-    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerAnimations.cs" />
     <Compile Include="Assets\Scripts\Rotate\Rotate.cs" />
     <Compile Include="Assets\Scripts\Rotate\RotateInput.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\UI\GameRestart.cs" />
     <Compile Include="Assets\Scripts\UI\LevelBar.cs" />
     <Compile Include="Assets\Scripts\UI\Score\Coin.cs" />
     <Compile Include="Assets\Scripts\UI\Score\TimeControl.cs" />
@@ -181,6 +187,7 @@
     <Compile Include="Assets\Scripts\UI\ShopMenu\CharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\ShopMenu\InGameCharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI\UISceneManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -425,7 +432,7 @@
       <HintPath>D:/Program Files/2019.4.21f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Program Files/2019.4.21f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -782,58 +789,58 @@
       <HintPath>D:/Program Files/2019.4.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Projects/Bitirme/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Projects/BitirmeSon/final-projects-bitirme-ekip-2-Dogu/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

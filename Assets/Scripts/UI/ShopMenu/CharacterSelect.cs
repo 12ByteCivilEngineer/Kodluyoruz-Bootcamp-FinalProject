@@ -36,7 +36,7 @@ public class CharacterSelect : MonoBehaviour
     }
     private void Update()
     {
-        UpdateUI();
+        UpdateUI();        
         shopCoinText.text= PlayerPrefs.GetInt("NumberOfCoins").ToString();
        //Debug.Log(PlayerPrefs.GetInt("SelectedCharacter", currentCharacterIndex));
     }
@@ -93,7 +93,12 @@ public class CharacterSelect : MonoBehaviour
         PlayerPrefs.SetInt("SelectedCharacter", currentCharacterIndex);
         selectButton.interactable = false;
         Debug.Log(PlayerPrefs.GetInt("SelectedCharacter", currentCharacterIndex));
-    }  
+    }
+    private void OnEnable()
+    {
+        //SelectedButton();
+        selectButton.interactable = false;
+    }
     public void UnLockCharacter()
     {
         CharacterBuy coinPrice = characters[currentCharacterIndex];

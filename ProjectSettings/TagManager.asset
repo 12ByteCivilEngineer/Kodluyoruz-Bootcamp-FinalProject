@@ -4,11 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Block
   - Coins
+  - eight
   - FxTemporaire
   - trap
   - Jetpack
-  - four
+  - CoinTarget
+  - GameOverCoinText
+  - ShopCoinText
   layers:
   - Default
   - TransparentFX
@@ -18,8 +22,8 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - DancingCharacters
+  - 
+  - 
   - 
   - 
   - 

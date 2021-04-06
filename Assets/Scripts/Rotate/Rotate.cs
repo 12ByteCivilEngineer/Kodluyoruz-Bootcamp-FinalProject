@@ -29,7 +29,7 @@ public class Rotate : MonoBehaviour
                 rotateAngle = 128f;
                 break;
             case "eight":
-                rotateAngle = 135f;
+                rotateAngle = 45f;
                 break;
         }
     }
@@ -47,12 +47,12 @@ public class Rotate : MonoBehaviour
 
         if (rotateInput.direction == "left")
         {
-            apartment.transform.DORotate( new Vector3(0f, - rotateAngle, 0f) , 1f, RotateMode.WorldAxisAdd);
+            apartment.transform.DORotate( new Vector3(0f, - rotateAngle, 0f) , 2f, RotateMode.WorldAxisAdd);
             rotateInput.direction = "none";
         }
         if (rotateInput.direction == "right")
         {
-            apartment.transform.DORotate(new Vector3(0f, rotateAngle, 0f), 1f, RotateMode.WorldAxisAdd);
+            apartment.transform.DORotate(new Vector3(0f, rotateAngle, 0f), 2f, RotateMode.WorldAxisAdd);
             rotateInput.direction = "none";
         }
     }
