@@ -31,17 +31,17 @@ public class FallControl : MonoBehaviour
 
             if (time >= 5)
             {
-                Fall();
+                Fall(1f);
             }
             Bar(time);
         }
         
     }
 
-    void Fall()
+    public void Fall(float fallDistance)
     {
-        Vector3 leftHand = hands[0].transform.position + new Vector3(0f, -1f, 0f);
-        Vector3 righttHand = hands[1].transform.position + new Vector3(0f, -1f, 0f);
+        Vector3 leftHand = hands[0].transform.position + new Vector3(0f, -fallDistance, 0f);
+        Vector3 righttHand = hands[1].transform.position + new Vector3(0f, -fallDistance, 0f);
         Vector3 handMatcher = new Vector3(righttHand.x, leftHand.y, righttHand.z);
         hands[0].transform.DOMove(leftHand, 1f);
         hands[1].transform.DOMove(handMatcher, 1f);       
