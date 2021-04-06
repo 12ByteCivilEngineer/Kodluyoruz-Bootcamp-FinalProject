@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public GameObject mainMenuScreen;
     public GameObject pauseScreen;
     public GameObject winnerScreen;
+    public GameObject particleEfect;
     public GameObject inGame;
     public GameObject inGameScene;
     public GameObject shopScreen;
@@ -157,6 +158,7 @@ public class UIManager : MonoBehaviour
     public void NextLevelScreen()
     {
         winnerScreen.SetActive(true);
+        particleEfect.SetActive(true);
         inGame.SetActive(false);
     }
     public void GameOverRestart()

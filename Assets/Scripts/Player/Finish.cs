@@ -11,7 +11,9 @@ public class Finish : MonoBehaviour
         if (other.CompareTag("Finish"))
         {
             Time.timeScale = 0f;
-            winnerScreen.SetActive(true);            
+            //winnerScreen.SetActive(true);
+            FindObjectOfType<UIManager>().NextLevelScreen();
+            
             Debug.Log("Değdim");
             
             TimeControl.instance.GameOver();
