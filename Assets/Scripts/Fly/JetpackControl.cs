@@ -82,10 +82,10 @@ public class JetpackControl : MonoBehaviour
     {
         Vector3 leftHand = hands[0].transform.position + new Vector3(0f, y, 0f);
         Vector3 righttHand = hands[1].transform.position + new Vector3(0f, y, 0f);
-        Vector3 handMatcher = new Vector3(righttHand.x, leftHand.y, righttHand.z);
+        //Vector3 handMatcher = new Vector3(righttHand.x, leftHand.y, righttHand.z);
 
         hands[0].transform.DOMove(leftHand, 1f);
-        hands[1].transform.DOMove(handMatcher, 1f);
+        hands[1].transform.DOMove(righttHand, 1f);
         HandsMovementController.isLeft = true;
     }
 }
