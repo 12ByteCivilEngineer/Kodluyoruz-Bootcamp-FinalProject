@@ -10,12 +10,9 @@ public class Finish : MonoBehaviour
     {
         if (other.CompareTag("Finish"))
         {
-            Time.timeScale = 0f;
-            //winnerScreen.SetActive(true);
+            Time.timeScale = 0f;            
             FindObjectOfType<UIManager>().NextLevelScreen();
-            
-            Debug.Log("Değdim");
-            
+            FindObjectOfType<ParticleSystemPlay>().EffectStart();
             TimeControl.instance.GameOver();
            
         }
