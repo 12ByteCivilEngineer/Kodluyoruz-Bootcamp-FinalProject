@@ -21,7 +21,7 @@ public class FallControl : MonoBehaviour
 
     void BreakTime()
     {
-        if (!FlyControl.FlyStatu)
+        if (!FlyControl.FlyStatu && Pavement.isGameStarted)
         {
             time = time + Time.deltaTime;
             if (Input.GetButton("Fire1"))

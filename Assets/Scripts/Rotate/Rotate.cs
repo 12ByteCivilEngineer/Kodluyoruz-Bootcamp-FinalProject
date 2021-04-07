@@ -20,13 +20,13 @@ public class Rotate : MonoBehaviour
                 rotateAngle = 90f;
                 break;
             case "five":
-                rotateAngle = 108f;
+                rotateAngle = 72;
                 break;
             case "six":
-                rotateAngle = 120f;
+                rotateAngle = 60;
                 break;
             case "seven":
-                rotateAngle = 128f;
+                rotateAngle = 52;
                 break;
             case "eight":
                 rotateAngle = 45f;

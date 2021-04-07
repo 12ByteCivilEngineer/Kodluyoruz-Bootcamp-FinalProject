@@ -12,6 +12,7 @@ public class JetpackControl : MonoBehaviour
     [SerializeField]
     GameObject jetpack;
     float time;
+    bool isBackJump = false;
 
 
     private void Start()
@@ -32,6 +33,14 @@ public class JetpackControl : MonoBehaviour
             InActivateJetpack();
 
         }
+        if (time <=10 && time>= 9)
+        {
+            BackJump(-2f);
+        }
+        if (time <= 2 && time >= 1)
+        {
+            BackJump(2f);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,20 +55,33 @@ public class JetpackControl : MonoBehaviour
     void ActivateJetpack()
     {
         FlyControl.FlyStatu = true;
-            jetpack.SetActive(true);
-        Fly();
+        jetpack.SetActive(true);
+        Fly(5f);
+
     }
 
     void InActivateJetpack()
     {
+        //BackJump(5f);
         FlyControl.FlyStatu = false;
         jetpack.SetActive(false);
 
     }
-    public void Fly()
+
+    void BackJump(float jumpDistance)
     {
-        Vector3 leftHand = hands[0].transform.position + new Vector3(0f, 5f, 0f);
-        Vector3 righttHand = hands[1].transform.position + new Vector3(0f, 5f, 0f);
+        Vector3 leftHand = hands[0].transform.position + new Vector3(0f, 0f, jumpDistance);
+        Vector3 righttHand = hands[1].transform.position + new Vector3(0f, 0f, jumpDistance);
+        Vector3 handMatcher = new Vector3(righttHand.x, leftHand.y, righttHand.z);
+
+        hands[0].transform.DOMove(leftHand, 1f);
+        hands[1].transform.DOMove(handMatcher, 1f);
+    }
+
+    public void Fly(float y)
+    {
+        Vector3 leftHand = hands[0].transform.position + new Vector3(0f, y, 0f);
+        Vector3 righttHand = hands[1].transform.position + new Vector3(0f, y, 0f);
         Vector3 handMatcher = new Vector3(righttHand.x, leftHand.y, righttHand.z);
 
         hands[0].transform.DOMove(leftHand, 1f);

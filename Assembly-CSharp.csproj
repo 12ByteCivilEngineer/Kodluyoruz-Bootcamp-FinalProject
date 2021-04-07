@@ -188,6 +188,9 @@
     <Compile Include="Assets\Scripts\UI\ShopMenu\InGameCharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\UISceneManager.cs" />
+    <Compile Include="Assets\Scripts\Vase\Pooling\IVase.cs" />
+    <Compile Include="Assets\Scripts\Vase\Pooling\VasePooler.cs" />
+    <Compile Include="Assets\Scripts\Vase\Pooling\VaseSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

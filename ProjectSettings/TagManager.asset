@@ -13,6 +13,7 @@ TagManager:
   - CoinTarget
   - GameOverCoinText
   - ShopCoinText
+  - Vase
   layers:
   - Default
   - TransparentFX
