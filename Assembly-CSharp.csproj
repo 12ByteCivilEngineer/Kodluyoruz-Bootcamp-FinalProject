@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cinemachine.cs" />
     <Compile Include="Assets\CollectObject\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\CollectObject\Scripts\CollectObject.cs" />
     <Compile Include="Assets\CollectObject\Scripts\CollectingScore.cs" />
@@ -153,6 +154,7 @@
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\PlayerInputController.cs" />
     <Compile Include="Assets\PlayerMovementController.cs" />
+    <Compile Include="Assets\Resources\Build\BuildManager.cs" />
     <Compile Include="Assets\Resources\Build\BuildSpawner.cs" />
     <Compile Include="Assets\Sabit.cs" />
     <Compile Include="Assets\Scripts\Camera\PlayerTakip.cs" />
@@ -191,6 +193,7 @@
     <Compile Include="Assets\Scripts\UI\ShopMenu\CharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\ShopMenu\InGameCharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI\UISceneManager.cs" />
     <Compile Include="Assets\Scripts\Vase\Pooling\IVase.cs" />
     <Compile Include="Assets\Scripts\Vase\Pooling\VasePooler.cs" />
     <Compile Include="Assets\Scripts\Vase\Pooling\VaseSpawner.cs" />
@@ -791,6 +794,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/UnityRepo/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Dogu/Unity Oyun/UnityRepo/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>C:/Users/Dogu/Unity Oyun/UnityRepo/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
@@ -826,6 +832,9 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>C:/Users/Dogu/Unity Oyun/UnityRepo/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/Dogu/Unity Oyun/UnityRepo/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/UnityRepo/final-projects-bitirme-ekip-2/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
