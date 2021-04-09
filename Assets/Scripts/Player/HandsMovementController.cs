@@ -14,7 +14,6 @@ public class HandsMovementController : MonoBehaviour
     GameObject collisionDetector;
     public static bool isLeft = true;
     bool isMoving = false;
-    public bool isFly = false;
 
     private void Awake()
     {
@@ -37,7 +36,7 @@ public class HandsMovementController : MonoBehaviour
         int i = 0;
         if (isLeft) { i = 0; }
         else { i = 1; }
-        if (!isMoving && !isFly)
+        if (!isMoving && !FlyControl.FlyStatu)
         {
             isMoving = true;
             StartCoroutine(DoingMovement());

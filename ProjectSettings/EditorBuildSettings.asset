@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameSceneMainYeni.unity
+    path: Assets/Scenes/OguzSon(7.4).unity
     guid: f324e6ea922c19543a2d0e2b61e8144f
   - enabled: 1
     path: Assets/Scenes/NextLevel.unity
