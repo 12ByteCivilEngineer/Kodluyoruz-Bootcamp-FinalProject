@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/09.04/Oguz(09.04).unity
+    guid: ae3ad05e91f544b45ace8225a4250051
+  - enabled: 1
     path: Assets/Scenes/OguzSon(7.4-23,15).unity
     guid: f324e6ea922c19543a2d0e2b61e8144f
   - enabled: 1

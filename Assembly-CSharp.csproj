@@ -190,6 +190,7 @@
     <Compile Include="Assets\Scripts\Rotate\Rotate.cs" />
     <Compile Include="Assets\Scripts\Rotate\RotateInput.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\UI\About.cs" />
     <Compile Include="Assets\Scripts\UI\GameRestart.cs" />
     <Compile Include="Assets\Scripts\UI\LevelBar.cs" />
     <Compile Include="Assets\Scripts\UI\Particle\ParticleSystemPlay.cs" />

@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public LevelBar levelBar;
     public GameObject settingScreen;   
     public GameObject mainScreen;
+    public GameObject aboutScreen;
     public GameObject backGroundImage;
     public GameObject gameOverScreen;
     public GameObject mainMenuScreen;
@@ -171,6 +172,16 @@ public class UIManager : MonoBehaviour
 
         GameRestart.restartBool = true;
         gameOverScreen.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
+    public void AboutScreen()
+    {
+        mainScreen.SetActive(false);
+        aboutScreen.SetActive(true);
+        characterDancing.SetActive(false);
+    }
+    public void AboutScreenToMenu()
+    {
         SceneManager.LoadScene(0);
     }
     
