@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject mainMenuScreen;
     public GameObject pauseScreen;
-    public GameObject winnerScreen;   
+    public GameObject winnerScreen;
     public GameObject inGame;
     public GameObject inGameScene;
     public GameObject shopScreen;
@@ -59,6 +59,7 @@ public class UIManager : MonoBehaviour
     }
     public void StartGame()
     {
+
         Time.timeScale = GameManager.gameSpeed;
         InGame();
         //gameTutorialScreen.SetActive(true);
@@ -67,6 +68,7 @@ public class UIManager : MonoBehaviour
         //Game Start
         //SceneManager.LoadScene(1);
         Debug.Log("oyun başlıyor.");
+        Pavement.isGameStarted = true;
     }
     public void InGame()
     {
@@ -153,14 +155,20 @@ public class UIManager : MonoBehaviour
         //winnerScreen.SetActive(false);
         //mainMenuScreen.SetActive(true);
         SceneManager.LoadScene(0);
+        Pavement.isGameStarted = false;
+
     }
     public void NextLevelScreen()
     {
-        winnerScreen.SetActive(true);        
+        Pavement.isGameStarted = false;
+
+        winnerScreen.SetActive(true);
         inGame.SetActive(false);
     }
     public void GameOverRestart()
     {
+        Pavement.isGameStarted = false;
+
         GameRestart.restartBool = true;
         gameOverScreen.SetActive(false);
         SceneManager.LoadScene(0);

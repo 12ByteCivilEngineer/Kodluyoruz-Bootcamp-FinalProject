@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Vakum : MonoBehaviour
 {
-    public GameObject leftHand;
-    void Update()
+    public GameObject hand;
+    [Range(0f,100f)] public float power;
+
+    void FixedUpdate()
     {
-        gameObject.transform.position = leftHand.transform.position;
+
+        Vector3 lerpPosition = Vector3.Lerp(transform.position, hand.transform.position, power * Time.fixedDeltaTime);
+        transform.position = lerpPosition;
     }
 }
