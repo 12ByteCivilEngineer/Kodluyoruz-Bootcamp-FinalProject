@@ -63,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Anim2.cs" />
     <Compile Include="Assets\Cinemachine.cs" />
     <Compile Include="Assets\CollectObject\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\CollectObject\Scripts\CollectObject.cs" />
@@ -152,9 +151,6 @@
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowDragger.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManager.cs" />
     <Compile Include="Assets\Modern UI Pack\Scripts\Window\WindowManagerEditor.cs" />
-    <Compile Include="Assets\Packages\UnityFBXExporter\FBXExporter.cs" />
-    <Compile Include="Assets\Packages\UnityFBXExporter\FBXUnityMaterialGetter.cs" />
-    <Compile Include="Assets\Packages\UnityFBXExporter\FBXUnityMeshGetter.cs" />
     <Compile Include="Assets\Player.cs" />
     <Compile Include="Assets\PlayerInputController.cs" />
     <Compile Include="Assets\PlayerMovementController.cs" />
@@ -185,7 +181,6 @@
     <Compile Include="Assets\Scripts\Player\InputController.cs" />
     <Compile Include="Assets\Scripts\Player\Vakum\Vakum.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimations.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Rotate\Rotate.cs" />
     <Compile Include="Assets\Scripts\Rotate\RotateInput.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
@@ -202,7 +197,6 @@
     <Compile Include="Assets\Scripts\Vase\Pooling\IVase.cs" />
     <Compile Include="Assets\Scripts\Vase\Pooling\VasePooler.cs" />
     <Compile Include="Assets\Scripts\Vase\Pooling\VaseSpawner.cs" />
-    <Compile Include="Assets\SimplePeople\Models\AnimationsScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

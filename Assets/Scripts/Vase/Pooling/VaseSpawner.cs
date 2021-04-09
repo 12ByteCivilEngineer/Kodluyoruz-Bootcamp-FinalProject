@@ -18,10 +18,10 @@ public class VaseSpawner : MonoBehaviour
         if (Pavement.isGameStarted)
         {
             timer += Time.deltaTime;
-            if (timer >= 5f)
+            if (timer >= 5)
             {
                 Spawn();
-                timer = 0f;
+                timer = 0;
             }
         }
         
