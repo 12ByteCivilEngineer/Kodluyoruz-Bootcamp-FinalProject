@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17222,6 +17222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 363c377d11c829246a6ea832b57acb52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelBar: {fileID: 0}
   settingScreen: {fileID: 601804994}
   mainScreen: {fileID: 1643211096}
   backGroundImage: {fileID: 1549606885}
@@ -19055,11 +19056,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1382417300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c15f7160069fc9a4a9bb6753b9c8591b, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiScene: {fileID: 1266967003}
-  inGameScene: {fileID: 166008649}
 --- !u!1 &1382774290
 GameObject:
   m_ObjectHideFlags: 0
@@ -22819,6 +22818,10 @@ MonoBehaviour:
   shopCoinText: {fileID: 1765516986}
   gameOverText: {fileID: 0}
   coinPoint: 500
+  rotSpeed: 100
+  scaleRatio: {x: 0.01, y: 0.01, z: 0.01}
+  coinPosIncrement: {x: 8, y: 14, z: 0}
+  animTime: 2
 --- !u!54 &1645605867
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -26093,6 +26096,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 166008650}
     m_Modifications:
+    - target: {fileID: 570843133, guid: 85ce324f1f9e4d144ad6438933620b76, type: 3}
+      propertyPath: winnerScreen
+      value: 
+      objectReference: {fileID: 168594664}
     - target: {fileID: 2656340726279950948, guid: 85ce324f1f9e4d144ad6438933620b76,
         type: 3}
       propertyPath: m_Enabled
@@ -26999,6 +27006,10 @@ MonoBehaviour:
   shopCoinText: {fileID: 1765516986}
   gameOverText: {fileID: 0}
   coinPoint: 500
+  rotSpeed: 100
+  scaleRatio: {x: 0.01, y: 0.01, z: 0.01}
+  coinPosIncrement: {x: 8, y: 14, z: 0}
+  animTime: 2
 --- !u!1 &1875208669
 GameObject:
   m_ObjectHideFlags: 0
@@ -29484,10 +29495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c3a2bb041e644ef95c52b8500e7813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 570843132}
-  smoothSpeed: 0.125
-  yPosition: 0
-  offset: 0
 --- !u!1 &2017030635
 GameObject:
   m_ObjectHideFlags: 0

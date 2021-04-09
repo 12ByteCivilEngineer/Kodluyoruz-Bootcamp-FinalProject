@@ -12,6 +12,6 @@ public class BuildManager : MonoBehaviour
 
     private void Awake()
     {
-        buildSpawner = new BuildSpawner(buildContainer);
+        //buildSpawner = new BuildSpawner(buildContainer);
     }
 }
