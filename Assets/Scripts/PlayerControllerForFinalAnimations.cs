@@ -2,16 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerForFinalAnimations : MonoBehaviour
 {
 
     public Rigidbody sousage;
     public Rigidbody thief;
     public Animator animForSouage;
     public Animator animForThief;
+    public GameObject vakums;
 
     [SerializeField]
     ParticleSystem boom;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (vakums.CompareTag("FinalCollider"))
+        {
+            HandCollisionHandler[] handCollisionHandlers = FindObjectsOfType<HandCollisionHandler>();
+
+            foreach (HandCollisionHandler element in handCollisionHandlers)
+            {
+                element.MinDistance = Mathf.Infinity;
+            }
+
+            animForSouage.Play("FinalClimb");
+        }
+    }
 
     void Update()
     {

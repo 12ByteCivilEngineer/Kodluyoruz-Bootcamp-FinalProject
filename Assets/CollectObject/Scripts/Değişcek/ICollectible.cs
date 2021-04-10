@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ICollectible
 {
-    bool OnCollect(PlayerController playerController);
+    bool OnCollect(PlayerControllerForFinalAnimations playerController);
 }

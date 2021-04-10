@@ -12,6 +12,8 @@ TagManager:
   - ShopCoinText
   - Vase
   - ExitBlock
+  - Thief
+  - FinalCollider
   layers:
   - Default
   - TransparentFX
