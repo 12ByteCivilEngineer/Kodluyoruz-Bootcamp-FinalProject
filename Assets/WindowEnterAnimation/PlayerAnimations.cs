@@ -44,7 +44,7 @@ public class PlayerAnimations : MonoBehaviour
         if (isInside&isrotated)
         {
             anim.enabled = false;
-            apartment.transform.DORotate(new Vector3(0f, 0f, 45f), 2f, RotateMode.LocalAxisAdd);
+            apartment.transform.DORotate(new Vector3(0f, 45f, 0f), 2f, RotateMode.LocalAxisAdd);
             isrotated = false;
             Invoke("Check",2.1f);
             
@@ -53,7 +53,7 @@ public class PlayerAnimations : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Finish")&oynadı)
         {
             //Debug.Log(gameObject.transform.position.z);
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 17f);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 14f);
             isInside = true;
             oynadı = false;
         }
