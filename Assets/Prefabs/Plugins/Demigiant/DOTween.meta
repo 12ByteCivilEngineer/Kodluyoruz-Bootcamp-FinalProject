@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Plugins/Demigiant/DOTween.meta
 guid: 59ab08314ba387c489ae1a2d70dc2fa3
+=======
+guid: 312e227292ca3a2438c1eb6bb6b3213f
+>>>>>>> Ortak:Assets/AurynSky/Gems Ultimate Pack/Scripts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
