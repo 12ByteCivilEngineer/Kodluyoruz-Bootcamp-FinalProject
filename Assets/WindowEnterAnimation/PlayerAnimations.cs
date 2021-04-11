@@ -10,6 +10,8 @@ public class PlayerAnimations : MonoBehaviour
     Rigidbody[] bodies;
 
     public GameObject player1;
+    public GameObject girisPosition1;
+    public GameObject cikisPosition1;
 
     GameObject collidingObject;
 
@@ -53,7 +55,7 @@ public class PlayerAnimations : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Finish")&oynadı)
         {
             //Debug.Log(gameObject.transform.position.z);
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 14f);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
             isInside = true;
             oynadı = false;
         }
@@ -66,18 +68,19 @@ public class PlayerAnimations : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Block"))
         {
+            //gameObject.transform.position = girisPosition1.transform.position;
             Debug.Log(other.gameObject.transform.localRotation.eulerAngles.z);
             Debug.Log(gameObject.transform.position);
             
             anim.enabled = true;
-            
 
-            
+
+
 
             foreach (Rigidbody body in bodies)
             {
                 body.transform.Rotate(0, 0, 0);
-                
+
             }
 
             HandCollisionHandler[] handCollisionHandlers = FindObjectsOfType<HandCollisionHandler>();
@@ -94,10 +97,7 @@ public class PlayerAnimations : MonoBehaviour
             }
             gameObject.GetComponent<FallControl>().enabled = false;
 
-            player1.transform.rotation = Quaternion.Euler(0, 0, 0);
-
-
-
+            player1.transform.rotation = Quaternion.Euler(0,0,0);         
 
         }
         if (other.gameObject.CompareTag("ExitBlock") && isInside) 
@@ -106,11 +106,11 @@ public class PlayerAnimations : MonoBehaviour
             collidingObject = other.gameObject;
             Debug.Log(other.gameObject.transform.localRotation.eulerAngles.z);
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 3f);
-
+            //gameObject.transform.position = cikisPosition1.transform.position;
             anim.applyRootMotion = false;
             anim.enabled = true;
             player1.transform.rotation = Quaternion.Euler(0, 180, 0);
-            anim.Play("RollContinue");
+            anim.Play("RollContinue");            
             isInside = false;
             
             

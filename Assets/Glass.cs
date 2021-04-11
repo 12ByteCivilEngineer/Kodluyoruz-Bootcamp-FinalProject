@@ -6,7 +6,7 @@ public class Glass : MonoBehaviour
 {
     Rigidbody[] bodies;
     [SerializeField] GameObject dummy;
-    MeshCollider[] colliders;
+    MeshCollider[] colliders;   
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,9 +27,8 @@ public class Glass : MonoBehaviour
         {
             //FindObjectOfType<GameManager>().IsGameLost = true;
             // GAME OVER
-
-            Destroy(this.GetComponent<BoxCollider>());
-
+            
+            Destroy(this.GetComponent<BoxCollider>());            
             foreach (Rigidbody element in bodies)
             {
                 element.useGravity = true;
