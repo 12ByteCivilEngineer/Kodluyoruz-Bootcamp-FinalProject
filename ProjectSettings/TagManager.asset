@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
   - Block
   - eight
   - Jetpack
@@ -13,19 +12,8 @@ TagManager:
   - ShopCoinText
   - Vase
   - ExitBlock
-  - Thief
-  - FinalCollider
-=======
-  - GameOverCoinText
-  - ShopCoinText
-  - eight
-  - Jetpack
-  - Vase
-  - Block
-  - FxTemporaire
   - Root
   - Hands
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

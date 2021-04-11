@@ -38,7 +38,7 @@ public class HandsMovementController : MonoBehaviour
         int j = 1;
         if (isLeft) { i = 0; j = 1; }
         else { i = 1; j = 0; }
-        if (!isMoving && !FlyControl.FlyStatu)
+        if (!isMoving && !FlyControl.FlyStatu && !GlassFall.glassFallCheck)
         {
             isMoving = true;
             StartCoroutine(DoingMovement());

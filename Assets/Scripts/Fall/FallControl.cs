@@ -9,7 +9,8 @@ public class FallControl : MonoBehaviour
     public Slider slider;
     public Gradient gradient;
     public Image gradientColor;
-    public GameObject[] hands;
+    //public GameObject[] hands;
+    public GameObject handler;
     float time;
     HandsMovementController movementController;
 
@@ -35,17 +36,23 @@ public class FallControl : MonoBehaviour
             }
             Bar(time);
         }
-        
+
     }
 
     public void Fall(float fallDistance)
     {
-        Vector3 leftHand = hands[0].transform.position + new Vector3(0f, -fallDistance, 0f);
-        Vector3 righttHand = hands[1].transform.position + new Vector3(0f, -fallDistance, 0f);
-        //Vector3 handMatcher = new Vector3(righttHand.x, leftHand.y, righttHand.z);
-        hands[0].transform.DOMove(leftHand, 1f);
-        hands[1].transform.DOMove(righttHand, 1f);       
-        //HandsMovementController.isLeft = true;
+        //Vector3 leftHand = hands[0].transform.position + new Vector3(0f, -fallDistance, 0f);
+        //Vector3 righttHand = hands[1].transform.position + new Vector3(0f, -fallDistance, 0f);
+        ////Vector3 handMatcher = new Vector3(righttHand.x, leftHand.y, righttHand.z);
+        //hands[0].transform.DOMove(leftHand, 1f);
+        //hands[1].transform.DOMove(righttHand, 1f);       
+        ////HandsMovementController.isLeft = true;
+        ///
+
+        Vector3 handlerPos = handler.transform.position + new Vector3(0f, -fallDistance, 0f);
+
+        handler.transform.DOMove(handlerPos, 1f);
+
     }
 
     void Bar(float sliderTime)
@@ -53,5 +60,4 @@ public class FallControl : MonoBehaviour
         slider.value = sliderTime;
         gradientColor.color = gradient.Evaluate(slider.normalizedValue);
     }
-
 }

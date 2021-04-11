@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3061311518886325389}
   - component: {fileID: 4592249288047032218}
   - component: {fileID: -9102835685234737973}
+  - component: {fileID: -6637856839087783829}
   m_Layer: 0
   m_Name: vase
   m_TagString: Vase
@@ -122,6 +123,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af54922805955bb45a74bf9277000311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6637856839087783829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4977580922235995774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c903438905e4146b1909c2903ef5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   particleFX: {fileID: 7095428875516316364}

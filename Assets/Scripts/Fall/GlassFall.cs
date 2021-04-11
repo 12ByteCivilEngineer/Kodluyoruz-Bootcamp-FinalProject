@@ -6,31 +6,34 @@ public class GlassFall : MonoBehaviour
 {
     FallControl fallControl;
     float fallDistance = 5f;
-    [SerializeField] ParticleSystem particleFX;
-    MeshRenderer meshrenderer;
-    Rigidbody body;
-    BoxCollider boxCollider;
+    public static bool glassFallCheck;
+
     private void Awake()
     {
-        meshrenderer = GetComponent<MeshRenderer>();
-        body = GetComponent<Rigidbody>();
-        boxCollider = GetComponent<BoxCollider>();
+        fallControl = FindObjectOfType<FallControl>();
+        glassFallCheck = false;
     }
 
-    private void Start()
+    private void Update()
     {
-        fallControl = FindObjectOfType<FallControl>();
+        if (glassFallCheck)
+        {
+            StartCoroutine(MakeFalse());
+        }
+    }
+
+    IEnumerator MakeFalse()
+    {
+        yield return new WaitForSeconds(1.1f);
+        glassFallCheck = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            meshrenderer.enabled = false;
-            boxCollider.enabled = false;
-            body.isKinematic = true;
-            particleFX.Play();
             fallControl.Fall(fallDistance);
+            glassFallCheck = true;
             Destroy(gameObject, 3f);
         }
     }
