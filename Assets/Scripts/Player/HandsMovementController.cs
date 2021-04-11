@@ -34,13 +34,18 @@ public class HandsMovementController : MonoBehaviour
 
     public void ClimbUp()
     {
-        int i = 0;
-        int j = 1;
-        if (isLeft) { i = 0; j = 1; }
-        else { i = 1; j = 0; }
+        //int i = 0;
+        //int j = 1;
+        //if (isLeft) { i = 0; j = 1; }
+        //else { i = 1; j = 0; }
         if (!isMoving && !FlyControl.FlyStatu && !GlassFall.glassFallCheck)
         {
             isMoving = true;
+            Debug.Log("Clim up");
+            int i = 0;
+            int j = 1;
+            if (isLeft) { i = 0; j = 1; }
+            else { i = 1; j = 0; }
             StartCoroutine(DoingMovement());
             Vector3 target = hands[i].transform.position + (forceCoefficient * Vector3.up);
             Vector3 currentPos = hands[i].transform.position;
