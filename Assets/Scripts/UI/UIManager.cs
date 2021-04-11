@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(Time.timeScale);
+        //Debug.Log(Time.timeScale);
     }
    
     public void Setting()
@@ -85,7 +85,7 @@ public class UIManager : MonoBehaviour
     }
     IEnumerator SettingButtonAnimDelay()
     {
-        yield return new WaitForSeconds(.3f);
+        yield return new WaitForSecondsRealtime(.3f);
         mainScreen.SetActive(false);
         settingScreen.SetActive(true);
         characterDancing.SetActive(false);
