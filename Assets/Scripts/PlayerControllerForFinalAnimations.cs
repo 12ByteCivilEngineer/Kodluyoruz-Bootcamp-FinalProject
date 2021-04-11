@@ -10,21 +10,33 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
     public Animator animForSouage;
     public Animator animForThief;
     public GameObject vakums;
-
+    Rigidbody[] bodies;
+    bool isGameEnd = false;
     [SerializeField]
     ParticleSystem boom;
 
+    private void Awake()
+    {
+        bodies = GetComponentsInChildren<Rigidbody>();
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if (vakums.CompareTag("FinalCollider"))
+        if (other.gameObject.tag=="FinalCollider" && !isGameEnd)
         {
+            isGameEnd = true;
+            transform.eulerAngles = new Vector3(0f, 0f, 0f);
             HandCollisionHandler[] handCollisionHandlers = FindObjectsOfType<HandCollisionHandler>();
 
             foreach (HandCollisionHandler element in handCollisionHandlers)
             {
                 element.MinDistance = Mathf.Infinity;
             }
-
+            foreach (Rigidbody element in bodies)
+            {
+                element.isKinematic = true;
+            }
+            transform.position = FindObjectOfType<GameEndPosition>().gameObject.transform.position;
+            animForSouage.enabled = true;
             animForSouage.Play("FinalClimb");
         }
     }
