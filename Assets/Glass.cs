@@ -25,7 +25,7 @@ public class Glass : MonoBehaviour
     {
         if (other.tag == "Player" && !FlyControl.FlyStatu)
         {
-            //FindObjectOfType<GameManager>().IsGameLost = true;
+            FindObjectOfType<GameManager>().IsGameLost = true;
             // GAME OVER
             
             Destroy(this.GetComponent<BoxCollider>());            
