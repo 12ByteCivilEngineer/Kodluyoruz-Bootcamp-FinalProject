@@ -251,6 +251,7 @@ MonoBehaviour:
   rotSpeed: 300
   scaleRatio: {x: 0.3, y: 0.3, z: 0.3}
   coinPosIncrement: {x: 9, y: 16, z: 0}
+  animTime: 2
 --- !u!65 &8057397974485305403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -262,8 +263,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.509697, y: 4.476158, z: 5.700554}
-  m_Center: {x: 0.026256561, y: 0.0993309, z: 2.350277}
+  m_Size: {x: 5.2469635, y: 4.476158, z: 5.402466}
+  m_Center: {x: -0.12712097, y: 0.0993309, z: -1.2067108}
 --- !u!1 &8057397975669296636
 GameObject:
   m_ObjectHideFlags: 0
