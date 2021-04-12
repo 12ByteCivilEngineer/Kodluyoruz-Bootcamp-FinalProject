@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static float gameSpeed = 2f;
+    public static float gameSpeed = 1.5f;
     private void Awake()
     {
         Time.timeScale = gameSpeed;

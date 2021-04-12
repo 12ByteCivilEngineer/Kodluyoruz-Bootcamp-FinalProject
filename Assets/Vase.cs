@@ -8,37 +8,12 @@ public class Vase : MonoBehaviour
     [SerializeField] ParticleSystem particleFX;
     MeshRenderer meshrenderer;
     Rigidbody body;
-    BoxCollider boxCollider;
-    GameObject attentionImage;
-    UIManager uiManager;
+    BoxCollider boxCollider;    
     void Awake()
-    {
-        uiManager = FindObjectOfType<UIManager>();
+    {       
         meshrenderer = GetComponent<MeshRenderer>();
         body = GetComponent<Rigidbody>();
-        boxCollider = GetComponent<BoxCollider>();
-        attentionImage = GameObject.FindGameObjectWithTag("Attention");
-        //attentionImage.SetActive(false);
-    }
-   
-    private void Update()
-    {
-        //    int layerMask = LayerMask.GetMask("Player");
-        //    RaycastHit raycastHit;
-        //    if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out raycastHit, Mathf.Infinity, layerMask))
-        //    {
-        //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * raycastHit.distance, Color.red);
-        //        Debug.Log("Raycast çalışıyor");
-        //        uiManager.AttantionImageTrue();
-        //        attentionImage.SetActive(true);
-        //    }
-
-        //    else
-        //    {
-        //        uiManager.AttentionImageFalse();
-
-        //        attentionImage.SetActive(false);
-        //    }
+        boxCollider = GetComponent<BoxCollider>();        
     }
 
     private void OnTriggerEnter(Collider other)
