@@ -16,7 +16,6 @@ TagManager:
   - Hands
   - FinalCollider
   - Thief
-  - Attention
   layers:
   - Default
   - TransparentFX
@@ -26,8 +25,8 @@ TagManager:
   - UI
   - 
   - 
+  - Walls
   - Player
-  - 
   - 
   - 
   - 
