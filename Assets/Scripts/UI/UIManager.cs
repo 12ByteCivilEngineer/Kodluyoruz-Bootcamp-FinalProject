@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameTutorialScreen;
     public GameObject characterDancing;
     public GameObject selectedCharacter;
+    public GameObject attentionImage;
     public void Start()
     {
         Time.timeScale = 1f;
@@ -60,7 +61,7 @@ public class UIManager : MonoBehaviour
     }
     public void StartGame()
     {
-
+        attentionImage.SetActive(false);
         Time.timeScale = GameManager.gameSpeed;
         InGame();
         //gameTutorialScreen.SetActive(true);
@@ -183,6 +184,14 @@ public class UIManager : MonoBehaviour
     public void AboutScreenToMenu()
     {
         SceneManager.LoadScene(0);
+    }
+    public void AttantionImageTrue()
+    {
+        attentionImage.SetActive(true);
+    }
+    public void AttentionImageFalse()
+    {
+        attentionImage.SetActive(false);
     }
     
 }
