@@ -23,8 +23,6 @@ public class FallControl : MonoBehaviour
 
     void BreakTime()
     {
-        //Debug.Log(!FlyControl.FlyStatu);
-        //Debug.Log(Pavement.isGameStarted);
         if (!FlyControl.FlyStatu && Pavement.isGameStarted)
         {
             time = time + Time.deltaTime;

@@ -5,18 +5,6 @@ using UnityEngine;
 public class HandCollisionHandler : MonoBehaviour
 {
     SpringJoint springJoint;
-    public float SpringForce
-    {
-        get
-        {
-            return springJoint.spring;
-        }
-        set
-        {
-            springJoint.spring = value;
-        }
-    }
-
     public float MinDistance
     {
         private get
@@ -32,6 +20,5 @@ public class HandCollisionHandler : MonoBehaviour
     private void Awake()
     {
         springJoint = GetComponent<SpringJoint>();
-        SpringForce = springJoint.spring;
     }
 }
