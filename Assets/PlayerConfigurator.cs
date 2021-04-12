@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerConfigurator : MonoBehaviour
 {
     CharacterJoint[] charJoints;
+    Rigidbody[] bodies;
+    Rigidbody body;
     [SerializeField] bool enableProjection = true;
     [SerializeField] bool enablePreprocessing = false;
     [SerializeField] float projectionDistance = 0.1f;
@@ -12,6 +14,8 @@ public class PlayerConfigurator : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        bodies = GetComponentsInChildren<Rigidbody>();
+        body = GetComponent<Rigidbody>();
         charJoints = GetComponentsInChildren<CharacterJoint>();
         foreach(CharacterJoint element in charJoints)
         {
@@ -20,6 +24,13 @@ public class PlayerConfigurator : MonoBehaviour
             element.projectionDistance = projectionDistance;
             element.projectionAngle = projectionAngle;
         }
+        foreach(Rigidbody element in bodies)
+        {
+            element.interpolation = RigidbodyInterpolation.Interpolate;
+            element.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
+        }
+        body.interpolation = RigidbodyInterpolation.Interpolate;
+        body.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
     }
 
 
