@@ -14,6 +14,9 @@ TagManager:
   - ExitBlock
   - Root
   - Hands
+  - FinalCollider
+  - Thief
+  - Attention
   layers:
   - Default
   - TransparentFX
@@ -23,7 +26,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 
