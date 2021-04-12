@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static float gameSpeed = 1.5f;
+    public static float gameSpeed = 2f;
     private void Awake()
     {
         Time.timeScale = gameSpeed;
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator GameOverSceneLoading()
     {
-        yield return new WaitForSecondsRealtime(3f);
+        yield return new WaitForSecondsRealtime(2f);
         Time.timeScale = 0f;
         TimeControl.instance.GameOver();
         UIManager.instance.GameOverScene();

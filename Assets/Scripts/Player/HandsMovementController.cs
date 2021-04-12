@@ -13,6 +13,8 @@ public class HandsMovementController : MonoBehaviour
     [SerializeField] float maxAllowedHandGap = 2.47f;
     public static bool isLeft = true;
     bool isMoving = false;
+    [SerializeField]
+    private float deneme;
     //Rigidbody[] handsBody = new Rigidbody[2];
     [SerializeField] float bodyForce = 5f;
 
@@ -78,7 +80,7 @@ public class HandsMovementController : MonoBehaviour
     IEnumerator DoingMovement()
     {
         isMoving = true;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(deneme);
         isMoving = false;
     }
 }

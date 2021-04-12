@@ -109,9 +109,9 @@ public class PlayerAnimations : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Block") && !isPortalCooldownOn)
         {
-            Physics.IgnoreLayerCollision(8, 9);
-            Physics.IgnoreLayerCollision(0, 9);
-            Physics.IgnoreLayerCollision(9, 9);
+            //Physics.IgnoreLayerCollision(8, 9);
+            //Physics.IgnoreLayerCollision(0, 9);
+            //Physics.IgnoreLayerCollision(9, 9);
             HandCollisionHandler[] handCollisionHandlers = FindObjectsOfType<HandCollisionHandler>();
             foreach (Rigidbody element in bodies)
             {
@@ -194,9 +194,9 @@ public class PlayerAnimations : MonoBehaviour
         Debug.Log("final");
         springObjects[0].SpringForce = initialSpringForce;
         springObjects[1].SpringForce = initialSpringForce;
-        Physics.IgnoreLayerCollision(8, 9,false);
-        Physics.IgnoreLayerCollision(0, 9, false);
-        Physics.IgnoreLayerCollision(9, 9, false);
+        //Physics.IgnoreLayerCollision(8, 9,false);
+        //Physics.IgnoreLayerCollision(0, 9, false);
+        //Physics.IgnoreLayerCollision(9, 9, false);
         gameObject.GetComponent<FallControl>().enabled = true;
 
 

@@ -1014,6 +1014,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal1 yeni
       objectReference: {fileID: 0}
+    - target: {fileID: 8673544969996505680, guid: f3bc759ee88a7994ab1fe03070ccd90e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8673544969996505683, guid: f3bc759ee88a7994ab1fe03070ccd90e,
         type: 3}
       propertyPath: m_RootOrder

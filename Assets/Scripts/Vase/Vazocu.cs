@@ -5,35 +5,37 @@ using UnityEngine;
 public class Vazocu : MonoBehaviour
 {
 
-    Animator animator;
-    bool isRunning;
+    //Animator animator;
+    //bool isRunning;
+    //VaseSpawner vaseSpawner;
 
-    private void Start()
-    {
-        animator = gameObject.GetComponent<Animator>();
-        isRunning = false;
-    }
+    //private void Start()
+    //{
+    //    animator = gameObject.GetComponent<Animator>();
+    //    vaseSpawner = FindObjectOfType<VaseSpawner>();
+    //    isRunning = false;
+    //}
 
-    private void Update()
-    {
+    //private void Update()
+    //{
         
-        if (Pavement.isGameStarted && VaseSpawner.isSpawned)
-        {
-            isRunning = true;
-        }
-        else
-        {
-            isRunning = false;
-        }
+    //    if (Pavement.isGameStarted && VaseSpawner.isSpawned)
+    //    {
+    //        isRunning = true;
+    //    }
+    //    else
+    //    {
+    //        isRunning = false;
+    //    }
 
-        if (isRunning == true)
-        {
-            animator.SetBool("Running", true);
-        }
-        if (isRunning == false)
-        {
-            animator.SetBool("Running", false);
-        }
+        //if (isRunning == true)
+        //{
+        //    animator.SetBool("Running", true);
+        //}
+        //if (isRunning == false)
+        //{
+        //    animator.SetBool("Running", false);
+        //}
 
     }
 
@@ -91,4 +93,4 @@ public class Vazocu : MonoBehaviour
     //    }
     //}
 
-}
+//}

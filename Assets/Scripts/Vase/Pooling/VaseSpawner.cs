@@ -10,7 +10,7 @@ public class VaseSpawner : MonoBehaviour
     float timer;
     public static bool isSpawned;
     bool isInside = false;
-
+    public Animator animator;
     private void Start()
     {
         vasePooler = VasePooler.Instance;
@@ -18,9 +18,14 @@ public class VaseSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if (Mathf.Abs(player.transform.position.y - transform.position.y) < 25f)
+        if (Mathf.Abs(player.transform.position.y - transform.position.y) < 35f)
         {
             isInside = true;
+            
+        }
+        else
+        {
+            //animator.SetBool("Running", false);
         }
     }
 
@@ -59,10 +64,15 @@ public class VaseSpawner : MonoBehaviour
         {
 
             timer += Time.deltaTime;
-            if (timer >= 5f && isInside)
+            if (timer >= 5f && isInside && !FlyControl.FlyStatu)
             {
                 Spawn();
                 timer = 0f;
+                animator.SetBool("Running", true);
+            }
+            else
+            {
+                animator.SetBool("Running", false);
             }
         }
 
