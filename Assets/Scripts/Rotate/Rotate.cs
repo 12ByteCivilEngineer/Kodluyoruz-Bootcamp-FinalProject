@@ -9,6 +9,7 @@ public class Rotate : MonoBehaviour
     RotateInput rotateInput;
     float rotateAngle;
     float rotateSpeed = 10f;
+    bool isCooldownOn = false;
 
     private void Start()
     {
@@ -43,18 +44,24 @@ public class Rotate : MonoBehaviour
     {
 
         rotateInput.Swipe();
-
-
+        if (isCooldownOn) { return; }
         if (rotateInput.direction == "left")
         {
-            apartment.transform.DORotate( new Vector3(0f, - rotateAngle, 0f) , 2f, RotateMode.WorldAxisAdd);
+            StartCoroutine(StartCooldown());
+            apartment.transform.DORotate( new Vector3(0f, - rotateAngle, 0f) , 0.5f, RotateMode.WorldAxisAdd);
             rotateInput.direction = "none";
         }
         if (rotateInput.direction == "right")
         {
-            apartment.transform.DORotate(new Vector3(0f, rotateAngle, 0f), 2f, RotateMode.WorldAxisAdd);
+            StartCoroutine(StartCooldown());
+            apartment.transform.DORotate(new Vector3(0f, rotateAngle, 0f), 0.5f, RotateMode.WorldAxisAdd);
             rotateInput.direction = "none";
         }
     }
-
+    IEnumerator StartCooldown()
+    {
+        isCooldownOn = true;
+        yield return new WaitForSeconds(0.5f);
+        isCooldownOn = false;
+    }
 }

@@ -33,7 +33,7 @@ public class FallControl : MonoBehaviour
 
             if (time >= 5)
             {
-                Fall(fallDistance);
+                SlideFall(fallDistance);
             }
             Bar(time);
         }
@@ -42,10 +42,13 @@ public class FallControl : MonoBehaviour
 
     public void Fall(float fallDistance)
     {
-        //Vector3 handlerPos = handler.transform.position + new Vector3(0f, -fallDistance, 0f);
-        //handler.transform.DOMove(handlerPos, 1f);
-        handler.transform.position = handler.transform.position - Time.unscaledDeltaTime * fallDistance * Vector3.down;
+        Vector3 handlerPos = handler.transform.position + new Vector3(0f, -fallDistance, 0f);
+        handler.transform.DOMove(handlerPos, 1f);
+    }
 
+    private void SlideFall(float fallDistance)
+    {
+        handler.transform.position = handler.transform.position - Time.unscaledDeltaTime * fallDistance * Vector3.down;
     }
 
     void Bar(float sliderTime)
