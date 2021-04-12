@@ -3646,13 +3646,13 @@ Transform:
   - {fileID: 1420720205}
   - {fileID: 1449875309}
   - {fileID: 1046027314}
+  - {fileID: 1282320771}
   - {fileID: 145504773}
   - {fileID: 542412428}
   - {fileID: 879476082}
   - {fileID: 189650019}
   - {fileID: 1078233828}
   - {fileID: 2095804006}
-  - {fileID: 1282320771}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27029,7 +27029,7 @@ Transform:
   - {fileID: 1283651200}
   - {fileID: 1667121283}
   m_Father: {fileID: 166008650}
-  m_RootOrder: 15
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283651199
 GameObject:
@@ -42461,7 +42461,7 @@ Camera:
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 33
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
