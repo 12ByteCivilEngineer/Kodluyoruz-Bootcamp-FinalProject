@@ -97,21 +97,6 @@ public class PlayerAnimations : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Block"))
         {
-<<<<<<< Updated upstream
-            //gameObject.transform.position = girisPosition1.transform.position;
-            Debug.Log(other.gameObject.transform.localRotation.eulerAngles.z);
-            Debug.Log(gameObject.transform.position);
-            
-            anim.enabled = true;
-
-
-
-
-            foreach (Rigidbody body in bodies)
-            {
-                body.transform.Rotate(0, 0, 0);
-
-=======
             enterPortal = other.gameObject.transform;
             isAnimEnded = false;
             anim.enabled = true;
@@ -119,7 +104,6 @@ public class PlayerAnimations : MonoBehaviour
             foreach (Rigidbody body in bodies)
             {
                 body.transform.Rotate(0, 0, 0);
->>>>>>> Stashed changes
             }
 
             HandCollisionHandler[] handCollisionHandlers = FindObjectsOfType<HandCollisionHandler>();
@@ -136,28 +120,9 @@ public class PlayerAnimations : MonoBehaviour
             }
             gameObject.GetComponent<FallControl>().enabled = false;
 
-<<<<<<< Updated upstream
-            player1.transform.rotation = Quaternion.Euler(0,0,0);         
 
-        }
-        if (other.gameObject.CompareTag("ExitBlock") && isInside) 
-
-        {
-            collidingObject = other.gameObject;
-            Debug.Log(other.gameObject.transform.localRotation.eulerAngles.z);
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 3f);
-            //gameObject.transform.position = cikisPosition1.transform.position;
-            anim.applyRootMotion = false;
-            anim.enabled = true;
-            player1.transform.rotation = Quaternion.Euler(0, 180, 0);
-            anim.Play("RollContinue");            
-            isInside = false;
-            
-            
-=======
             player1.transform.rotation = Quaternion.Euler(0, 0, 0);
 
->>>>>>> Stashed changes
         }
         //if (other.gameObject.CompareTag("ExitBlock") && isInside) 
         //{
