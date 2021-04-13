@@ -26,7 +26,7 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
         if (other.gameObject.tag=="FinalCollider" && !isGameEnd)
         {
             isGameEnd = true;
-            transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            
             HandCollisionHandler[] handCollisionHandlers = FindObjectsOfType<HandCollisionHandler>();
 
             foreach (HandCollisionHandler element in handCollisionHandlers)
@@ -36,10 +36,17 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
             foreach (Rigidbody element in bodies)
             {
                 element.isKinematic = true;
+                element.collisionDetectionMode = CollisionDetectionMode.Discrete;
             }
+            Rigidbody body = GetComponent<Rigidbody>();
+            body.isKinematic = true;
+            body.collisionDetectionMode = CollisionDetectionMode.Discrete;
+            
+            //transform.localEulerAngles = new Vector3(0f, 0f, 0f);
             transform.position = FindObjectOfType<GameEndPosition>().gameObject.transform.position;
             animForSouage.enabled = true;
             animForSouage.Play("FinalClimb");
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             StartCoroutine(NextLevelScreen());
         }
     }
@@ -72,7 +79,7 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
     }
     IEnumerator NextLevelScreen()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSecondsRealtime(10f);
         finish.NextLevel();
     }
 }

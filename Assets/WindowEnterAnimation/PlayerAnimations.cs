@@ -11,8 +11,6 @@ public class PlayerAnimations : MonoBehaviour
     Rigidbody body;
 
     public GameObject player1;
-    public GameObject girisPosition1;
-    public GameObject cikisPosition1;
 
     GameObject collidingObject;
 
