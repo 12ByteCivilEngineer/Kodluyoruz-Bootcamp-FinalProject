@@ -17,4 +17,11 @@ public class Finish : MonoBehaviour
            
         }
     }
+    public void NextLevel()
+    {
+        Time.timeScale = 0f;
+        FindObjectOfType<UIManager>().NextLevelScreen();
+        FindObjectOfType<ParticleSystemPlay>().EffectStart();
+        TimeControl.instance.GameOver();
+    }
 }

@@ -10,6 +10,7 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
     public Animator animForSouage;
     public Animator animForThief;
     public GameObject vakums;
+    Finish finish;
     Rigidbody[] bodies;
     bool isGameEnd = false;
     [SerializeField]
@@ -18,6 +19,7 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
     private void Awake()
     {
         bodies = GetComponentsInChildren<Rigidbody>();
+        finish = FindObjectOfType<Finish>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -38,6 +40,7 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
             transform.position = FindObjectOfType<GameEndPosition>().gameObject.transform.position;
             animForSouage.enabled = true;
             animForSouage.Play("FinalClimb");
+            StartCoroutine(NextLevelScreen());
         }
     }
 
@@ -66,5 +69,10 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
     void ScaleCharacter()
     {
         sousage.transform.rotation = Quaternion.Euler(0, 180, 0);
+    }
+    IEnumerator NextLevelScreen()
+    {
+        yield return new WaitForSeconds(10f);
+        finish.NextLevel();
     }
 }
