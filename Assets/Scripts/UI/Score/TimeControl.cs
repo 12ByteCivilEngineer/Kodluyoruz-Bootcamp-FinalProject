@@ -93,7 +93,7 @@ public class TimeControl : MonoBehaviour
             highScore = score; 
             PlayerPrefs.SetFloat(highScoreStrings, score);
         }
-        gameOverText.text ="Score : "+ score.ToString("00");
+        gameOverText.text = "Score : 0";
         winnerText.text= "Score : " + score.ToString("00");
         highScoreText.text = "HighScore : " + highScore.ToString("00");
         winnerHighScoreText.text = "HighScore : " + highScore.ToString("00");
@@ -109,7 +109,7 @@ public class TimeControl : MonoBehaviour
             highScore = score;
             PlayerPrefs.SetFloat("NextHighScore", score);
         }
-        gameOverText.text = "Score : " + score.ToString("00");
+        gameOverText.text = "Score : 0";
         winnerText.text = "Score : " + score.ToString("00");
         highScoreText.text = "HighScore : " + highScore.ToString("00");
         winnerHighScoreText.text = "HighScore : " + highScore.ToString("00");

@@ -105,7 +105,7 @@ public class PlayerAnimations : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Block") && !isPortalCooldownOn)
+        if (other.gameObject.CompareTag("Block") && !isPortalCooldownOn && !FlyControl.FlyStatu )
         {
             //Physics.IgnoreLayerCollision(8, 9);
             //Physics.IgnoreLayerCollision(0, 9);

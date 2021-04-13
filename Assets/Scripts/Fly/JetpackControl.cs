@@ -6,7 +6,7 @@ using DG.Tweening;
 public class JetpackControl : MonoBehaviour
 {
     public GameObject[] hands;
-    public float flyTime = 10;
+    public float flyTime = 10;    
     HandsMovementController handMovementController;
 
     [SerializeField]
@@ -18,7 +18,7 @@ public class JetpackControl : MonoBehaviour
     private void Start()
     {
         jetpack.SetActive(false);
-        handMovementController = FindObjectOfType<HandsMovementController>();
+        handMovementController = FindObjectOfType<HandsMovementController>();       
     }
 
     private void Update()
@@ -72,10 +72,10 @@ public class JetpackControl : MonoBehaviour
     {
         Vector3 leftHand = hands[0].transform.position + new Vector3(0f, 0f, jumpDistance);
         Vector3 righttHand = hands[1].transform.position + new Vector3(0f, 0f, jumpDistance);
-        Vector3 handMatcher = new Vector3(righttHand.x, leftHand.y, righttHand.z);
+        //Vector3 handMatcher = new Vector3(righttHand.x, leftHand.y, righttHand.z);
 
         hands[0].transform.DOMove(leftHand, 1f);
-        hands[1].transform.DOMove(handMatcher, 1f);
+        hands[1].transform.DOMove(righttHand, 1f);
     }
 
     public void Fly(float y)

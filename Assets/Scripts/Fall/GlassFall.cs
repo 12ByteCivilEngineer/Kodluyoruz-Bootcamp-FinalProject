@@ -5,7 +5,8 @@ using UnityEngine;
 public class GlassFall : MonoBehaviour
 {
     FallControl fallControl;
-    float fallDistance = 5f;
+    [SerializeField]
+    float fallDistance = 5000f;
     public static bool glassFallCheck;
 
     private void Awake()
@@ -32,7 +33,7 @@ public class GlassFall : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            fallControl.Fall(fallDistance);
+            fallControl.SlideFall(fallDistance);
             glassFallCheck = true;
             Destroy(gameObject, 3f);
         }

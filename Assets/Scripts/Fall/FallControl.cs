@@ -48,7 +48,7 @@ public class FallControl : MonoBehaviour
         handler.transform.DOMove(handlerPos, 1f);
     }
 
-    private void SlideFall(float fallDistance)
+    public void SlideFall(float fallDistance)
     {
         handler.transform.position = handler.transform.position - Time.unscaledDeltaTime * fallDistance * Vector3.down;
     }
