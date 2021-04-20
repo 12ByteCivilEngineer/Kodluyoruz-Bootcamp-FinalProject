@@ -12374,7 +12374,11 @@ PrefabInstance:
       propertyPath: m_UpdateMode
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1996460887, guid: fe02926d86299874a921d05a946cbd6c, type: 3}
+    - {fileID: 1996460886, guid: fe02926d86299874a921d05a946cbd6c, type: 3}
+    - {fileID: 1996460884, guid: fe02926d86299874a921d05a946cbd6c, type: 3}
+    - {fileID: 1996460885, guid: fe02926d86299874a921d05a946cbd6c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fe02926d86299874a921d05a946cbd6c, type: 3}
 --- !u!1 &546046186 stripped
 GameObject:
@@ -31044,7 +31048,7 @@ PrefabInstance:
     - target: {fileID: 6126235149496662186, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.82
+      value: 8.33
       objectReference: {fileID: 0}
     - target: {fileID: 6126235149496662188, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
@@ -31184,7 +31188,7 @@ PrefabInstance:
     - target: {fileID: 6126235151277366265, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.88
+      value: 4.39
       objectReference: {fileID: 0}
     - target: {fileID: 6126235151277366267, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
@@ -42746,7 +42750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2656340726817903757}
-  deneme: 10
+  vector3: {x: 0, y: 20, z: -60}
 --- !u!20 &2014628107
 Camera:
   m_ObjectHideFlags: 0

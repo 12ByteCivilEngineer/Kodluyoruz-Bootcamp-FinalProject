@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerTakip : MonoBehaviour
 {
     public GameObject player;
-    public float deneme;
+    [SerializeField]
+    Vector3 vector3;
     void Update()
     {
-        gameObject.transform.position = new Vector3(transform.position.x, player.transform.position.y+deneme, transform.position.z);
+        gameObject.transform.position = new Vector3(transform.position.x, player.transform.position.y+vector3.y, player.transform.position.z+vector3.z);
     }
 }
