@@ -67,7 +67,7 @@ public class FallControl : MonoBehaviour
     }
     IEnumerator StartGame()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.5f);
         isGameStarted = true;
         TimeControl.instance.BeginGame();
     }
