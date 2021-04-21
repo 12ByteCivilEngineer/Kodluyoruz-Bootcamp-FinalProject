@@ -19,7 +19,8 @@ public class LevelBar : MonoBehaviour
 
     private Vector3 endLinePosion;
     private float fullDistance;
-    
+    private float progress = 0f;
+
 
     private void Start()
     {
@@ -47,7 +48,11 @@ public class LevelBar : MonoBehaviour
     {
         float newDistance = GetDistance();
         float progresValue = Mathf.InverseLerp(fullDistance, 0f, newDistance);
-        UptadeProgressValue(progresValue);
+        if (progresValue > progress)
+        {
+            progress = progresValue;
+        }
+        UptadeProgressValue(progress);
 
     }
 }
