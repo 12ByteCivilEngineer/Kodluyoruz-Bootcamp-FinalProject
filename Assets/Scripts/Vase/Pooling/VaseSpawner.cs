@@ -64,7 +64,7 @@ public class VaseSpawner : MonoBehaviour
         {
 
             timer += Time.deltaTime;
-            if (timer >= 5f && isInside && !FlyControl.FlyStatu)
+            if (timer >= 7f && isInside && !FlyControl.FlyStatu)
             {
                 Spawn();
                 timer = 0f;

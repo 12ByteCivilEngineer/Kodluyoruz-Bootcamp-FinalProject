@@ -17,20 +17,24 @@ public class CharacterSelect : MonoBehaviour
     {
         foreach (CharacterBuy character in characters)
         {
-            if (character.price==0)
-            {
-                character.inUnLocked = true;
-            }
-            else
-            {
-                character.inUnLocked = PlayerPrefs.GetInt(character.name, 0)==0 ? false : true;
-            }
+            //if (character.price==0)
+            //{
+            //    character.inUnLocked = true;
+            //}
+            //else
+            //{
+            //    character.inUnLocked = PlayerPrefs.GetInt(character.name, 0)==0 ? false : true;
+            //}
         }
         currentCharacterIndex = PlayerPrefs.GetInt("SelectedCharacter", 0);
         foreach (GameObject character in characterModels)
         {
             character.SetActive(false);
             characterModels[currentCharacterIndex].SetActive(true);
+        }
+        foreach (CharacterBuy character in characters)
+        {
+            //character.developers =
         }
         //PlayerPrefs.DeleteAll();         
     }
@@ -106,7 +110,7 @@ public class CharacterSelect : MonoBehaviour
         PlayerPrefs.SetInt("SelectedCharacter",currentCharacterIndex);
         coinPrice.inUnLocked = true;
         selectButton.interactable = false;
-        PlayerPrefs.SetInt("NumberOfCoins", PlayerPrefs.GetInt("NumberOfCoins", 0) - coinPrice.price); /*>> Coin - Satın alınan öge fiyatı*/        
+        //PlayerPrefs.SetInt("NumberOfCoins", PlayerPrefs.GetInt("NumberOfCoins", 0) - coinPrice.price); /*>> Coin - Satın alınan öge fiyatı*/        
     }
     public void UpdateUI()
     {
@@ -120,16 +124,16 @@ public class CharacterSelect : MonoBehaviour
         {
             buyButton.gameObject.SetActive(true);
             selectButton.gameObject.SetActive(false);
-            buyButton.GetComponentInChildren<Text>().text = "Buy -" + coinPrice.price;
+            buyButton.GetComponentInChildren<Text>().text = /*"Buy -" +*/ coinPrice.price;
 
-            if (coinPrice.price < PlayerPrefs.GetInt("NumberOfCoins", 0))
-            {
-                buyButton.interactable = true;
-            }
-            else
-            {
-                buyButton.interactable = false;
-            }
+            //if (coinPrice.price < PlayerPrefs.GetInt("NumberOfCoins", 0))
+            //{
+            //    buyButton.interactable = true;
+            //}
+            //else
+            //{
+            //    buyButton.interactable = false;
+            //}
         }
     }
 }
