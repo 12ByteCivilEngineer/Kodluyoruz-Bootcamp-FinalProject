@@ -32,10 +32,6 @@ public class CharacterSelect : MonoBehaviour
             character.SetActive(false);
             characterModels[currentCharacterIndex].SetActive(true);
         }
-        foreach (CharacterBuy character in characters)
-        {
-            //character.developers =
-        }
         //PlayerPrefs.DeleteAll();         
     }
     private void Update()
