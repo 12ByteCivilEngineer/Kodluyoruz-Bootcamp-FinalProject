@@ -12,17 +12,24 @@ public class FallControl : MonoBehaviour
     //public GameObject[] hands;
     public GameObject handler;
     float time;
+    bool isGameStarted = false;
     [SerializeField] float fallDistance;
     HandsMovementController movementController;
 
+    private void Start()
+    {
+        StartCoroutine(StartGame());
+    }
     void Update()
     {
 
         BreakTime();
     }
 
+
     void BreakTime()
     {
+        if (!isGameStarted) { return; }
         //Debug.Log(!FlyControl.FlyStatu);
         //Debug.Log(Pavement.isGameStarted);
         if (!FlyControl.FlyStatu && Pavement.isGameStarted)
@@ -57,5 +64,11 @@ public class FallControl : MonoBehaviour
     {
         slider.value = sliderTime;
         gradientColor.color = gradient.Evaluate(slider.normalizedValue);
+    }
+    IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(3f);
+        isGameStarted = true;
+        TimeControl.instance.BeginGame();
     }
 }

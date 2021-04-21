@@ -66,8 +66,8 @@ public class UIManager : MonoBehaviour
         InGame();
         //gameTutorialScreen.SetActive(true);
         gameOverScreen.SetActive(false);
-        TimeControl.instance.BeginGame();
         //Game Start
+        //TimeControl.instance.BeginGame();
         //SceneManager.LoadScene(1);
         Debug.Log("oyun başlıyor.");
         Pavement.isGameStarted = true;

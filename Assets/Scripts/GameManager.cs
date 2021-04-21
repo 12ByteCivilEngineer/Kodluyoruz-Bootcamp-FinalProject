@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = gameSpeed;
         //SetUpSingleton();  
         QualitySettings.vSyncCount = 1;
-        //Application.targetFrameRate = 60;
+       //Application.targetFrameRate = 60;
     }
     private bool isGameLost=false;
     public bool IsGameLost
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-
+       // FPSCounter();
     }
     IEnumerator GameOverSceneLoading()
     {
@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     private void FPSCounter()
     {
         float current = 0;
-        current = 1f / Time.deltaTime;
+        current = 1f / Time.unscaledDeltaTime;
         int avgFrameRate = (int)current;
         Debug.Log(avgFrameRate);
     }
