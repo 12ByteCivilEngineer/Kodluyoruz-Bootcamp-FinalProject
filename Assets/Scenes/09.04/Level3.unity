@@ -10170,23 +10170,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 453275774, guid: e5b9fa6cb6c70450f9f21ccc5f507cde, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1253442917, guid: e5b9fa6cb6c70450f9f21ccc5f507cde, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1333388870, guid: e5b9fa6cb6c70450f9f21ccc5f507cde, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1658990393, guid: e5b9fa6cb6c70450f9f21ccc5f507cde, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2032376650, guid: e5b9fa6cb6c70450f9f21ccc5f507cde, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3402846065439549348, guid: e5b9fa6cb6c70450f9f21ccc5f507cde,
         type: 3}
@@ -10216,7 +10216,7 @@ PrefabInstance:
     - target: {fileID: 4270869086662877850, guid: e5b9fa6cb6c70450f9f21ccc5f507cde,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -56.267
+      value: -35.1
       objectReference: {fileID: 0}
     - target: {fileID: 4270869086662877850, guid: e5b9fa6cb6c70450f9f21ccc5f507cde,
         type: 3}
@@ -36639,87 +36639,70 @@ MonoBehaviour:
     index: 0
     price: Oguz SEKMEN
     inUnLocked: 0
-    developers: 0
   - name: 1
     index: 1
     price: Harun TOKYER
     inUnLocked: 0
-    developers: 0
   - name: 2
     index: 2
     price: Doguhan YAZAR
     inUnLocked: 0
-    developers: 0
   - name: 3
     index: 3
     price: AslIhan ALTIN
     inUnLocked: 0
-    developers: 0
   - name: 4
     index: 4
     price: Dogukan URAZ
     inUnLocked: 0
-    developers: 0
   - name: 5
     index: 5
     price: Oguz SEKMEN
     inUnLocked: 0
-    developers: 0
   - name: 6
     index: 6
     price: Doguhan YAZAR
     inUnLocked: 0
-    developers: 0
   - name: 7
     index: 7
     price: AslIhan ALTIN
     inUnLocked: 0
-    developers: 0
   - name: 8
     index: 8
     price: HARUN TOKYER
     inUnLocked: 0
-    developers: 0
   - name: 9
     index: 9
     price: Dogukan URAZ
     inUnLocked: 0
-    developers: 0
   - name: 10
     index: 10
     price: doguhan yazar
     inUnLocked: 0
-    developers: 0
   - name: 11
     index: 11
     price: Dogukan uraz
     inUnLocked: 0
-    developers: 0
   - name: 12
     index: 12
     price: AslIhan ALTIN
     inUnLocked: 0
-    developers: 0
   - name: 13
     index: 13
     price: Harun TOKYER
     inUnLocked: 0
-    developers: 0
   - name: 14
     index: 14
     price: Dogukan URAZ
     inUnLocked: 0
-    developers: 0
   - name: 15
     index: 15
     price: Oguz SEKMEN
     inUnLocked: 0
-    developers: 0
   - name: 16
     index: 16
     price: Doguhan yazar
     inUnLocked: 0
-    developers: 0
   buyButton: {fileID: 1017433630}
   selectButton: {fileID: 2017030636}
   shopCoinText: {fileID: 1765516986}
@@ -43749,7 +43732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c37b1ccfbc7ed274eb99f9d40e72c4e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.8
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c37b1ccfbc7ed274eb99f9d40e72c4e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -43757,7 +43740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c37b1ccfbc7ed274eb99f9d40e72c4e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.6
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c37b1ccfbc7ed274eb99f9d40e72c4e6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44160,7 +44143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1489214292
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44381,7 +44364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1506867183
 MonoBehaviour:
   m_ObjectHideFlags: 0
