@@ -48276,7 +48276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -131}
+  m_AnchoredPosition: {x: -13, y: -46}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &687712801
@@ -64835,6 +64835,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 10.98
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: c14bb5ce28dbb7442a2f79d8b6a061ce, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1529fc8544e634f4087f1504e1d784c9, type: 2}
     - target: {fileID: 9500000, guid: c14bb5ce28dbb7442a2f79d8b6a061ce, type: 3}
       propertyPath: m_UpdateMode
       value: 2
@@ -82199,17 +82203,17 @@ PrefabInstance:
     - target: {fileID: 6126235149496662186, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.11
+      value: -8.73
       objectReference: {fileID: 0}
     - target: {fileID: 6126235149496662186, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.33
+      value: 8.75
       objectReference: {fileID: 0}
     - target: {fileID: 6126235149496662188, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6126235149496662189, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
@@ -82349,7 +82353,7 @@ PrefabInstance:
     - target: {fileID: 6126235151277366267, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6126235151277366268, guid: d69fa7f270a96794c91837ac840bd764,
         type: 3}
@@ -96229,7 +96233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1588454339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -134514,6 +134518,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Portal1 yeni (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673544969996505680, guid: f3bc759ee88a7994ab1fe03070ccd90e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8673544969996505683, guid: f3bc759ee88a7994ab1fe03070ccd90e,
         type: 3}
