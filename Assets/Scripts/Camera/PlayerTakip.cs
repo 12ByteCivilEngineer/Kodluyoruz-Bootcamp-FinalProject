@@ -5,10 +5,25 @@ using UnityEngine;
 public class PlayerTakip : MonoBehaviour
 {
     public GameObject player;
+    public GameObject enemy;
+    public float speed = 0.125f;
+
     [SerializeField]
-    Vector3 vector3;
-    void Update()
+    Vector3 offset;
+
+    private void Start()
     {
-        gameObject.transform.position = new Vector3(transform.position.x, player.transform.position.y+vector3.y, player.transform.position.z+vector3.z);
+        transform.position = enemy.transform.position + offset;
+    }
+
+    void FixedUpdate()
+    {
+        if (Pavement.isGameStarted)
+        {
+            Vector3 position = player.transform.position + offset;
+            Vector3 lerp = Vector3.Lerp(transform.position, position, speed * 5 * Time.deltaTime);
+            transform.position = new Vector3(transform.position.x, lerp.y, lerp.z);
+        }
+        
     }
 }
