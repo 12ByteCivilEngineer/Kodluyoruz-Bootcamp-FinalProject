@@ -16,6 +16,7 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
     [SerializeField]
     ParticleSystem boom;
 
+
     private void Awake()
     {
         bodies = GetComponentsInChildren<Rigidbody>();
@@ -53,21 +54,21 @@ public class PlayerControllerForFinalAnimations : MonoBehaviour
 
     void Update()
     {
-        if (animForSouage.GetCurrentAnimatorStateInfo(0).IsName("JumpOn"))
+        /*if (animForSouage.GetCurrentAnimatorStateInfo(0).IsName("JumpOn"))
         {
             thief.transform.rotation = Quaternion.Euler(0, 80, 0);
-        }
+        }*/
+
         if (animForSouage.GetCurrentAnimatorStateInfo(0).IsName("JumpOn"))
         {
             sousage.transform.rotation = Quaternion.Euler(0, -90, 0);
-            animForThief.Play("ReadyToFight");
+            animForThief.SetBool("readyToFight", true);
             boom.Play();
         }
 
         if (boom.IsAlive(true))
         {
-            thief.useGravity = true;
-            thief.transform.position = Vector3.MoveTowards(thief.transform.position, thief.transform.position - new Vector3(0, 0, 4), 0.09f);
+            //thief.useGravity = true;
             Invoke("ScaleCharacter", 2.0f);
         }
         
